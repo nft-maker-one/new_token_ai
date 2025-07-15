@@ -1,0 +1,7 @@
+[2025-07-13 17:11:42.355] pump_pool_create.py:28 - Connected to wss://mainnet.helius-rpc.com/?api-key=52eedaeb-aef0-4cc5-94a9-f4cdf8b9fb97
+[2025-07-13 17:11:42.368] pump_pool_create.py:31 - start monitor for U5s1QAT34wdnxHEP73XVp2QPws5XZwEj2RjHPzSvrNobjKn75wQBztQqTTm6Pztk7XiQGw4cu7SER8bLNCJsGGA
+[2025-07-13 17:11:42.594] pump_pool_create.py:37 - Received data: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Invalid Request: Invalid mentions provided'}, 'id': 1}
+[2025-07-13 17:12:42.941] pump_pool_create.py:52 - Connection closed: no close frame received or sent
+[2025-07-13 17:16:16.652] pump_pool_create.py:28 - Connected to wss://mainnet.helius-rpc.com/?api-key=52eedaeb-aef0-4cc5-94a9-f4cdf8b9fb97
+[2025-07-13 17:16:16.655] pump_pool_create.py:31 - start monitor for 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P
+[2025-07-13 17:16:48.383] pump_pool_create.py:52 - Connection closed: no close frame received or sent
