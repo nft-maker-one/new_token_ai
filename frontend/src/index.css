@@ -85,8 +85,8 @@ code {
 
 .tokens-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 15px;
   margin-top: 20px;
 }
 
@@ -257,17 +257,259 @@ code {
   font-size: 1rem;
 }
 
+/* 紧凑型代币卡片样式 */
+.token-card-compact {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.token-card-compact:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
+}
+
+.token-header-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.token-main-info {
+  flex: 1;
+}
+
+.token-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.token-name {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+.token-symbol {
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.token-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.token-time {
+  color: #ffc107;
+}
+
+.token-supply {
+  color: #28a745;
+}
+
+.token-status-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.token-status {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.risk-badge {
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.progress-bar-compact {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.analysis-tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.analysis-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border: 1px solid;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.75rem;
+}
+
+.analysis-tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.tag-icon {
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+.tag-text {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.token-data-compact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-item {
+  text-align: center;
+}
+
+.data-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.data-value {
+  display: block;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 悬浮弹窗样式 */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-trigger {
+  cursor: pointer;
+}
+
+.tooltip-popup {
+  position: fixed;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  max-width: 300px;
+  min-width: 200px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: tooltipFadeIn 0.2s ease-out;
+  pointer-events: auto;
+  opacity: 0.5;
+}
+
+
+/* .tooltip-popup::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.95);
+} */
+
+.tooltip-header {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #00d4ff;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  padding-bottom: 4px;
+}
+
+.tooltip-content {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-100%) scale(1);
+  }
+}
+
 @media (max-width: 768px) {
   .tokens-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .status-bar {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .header h1 {
     font-size: 2rem;
+  }
+
+  .analysis-tags-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .token-data-compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tooltip-popup {
+    max-width: 250px;
+    min-width: 180px;
   }
 }

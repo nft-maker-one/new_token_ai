@@ -1,0 +1,716 @@
+2025-07-18 17:45:14,085 - backend.utils.env_loader:19 - INFO - current file = D:\ai_crypto\backend\utils\env_loader.py
+2025-07-18 17:45:14,086 - backend.utils.env_loader:32 - INFO - 项目根目录: D:\ai_crypto
+2025-07-18 17:45:14,087 - backend.utils.env_loader:33 - INFO - 当前工作目录: D:\ai_crypto
+2025-07-18 17:45:14,088 - backend.utils.env_loader:37 - INFO - 尝试加载环境变量文件: D:\ai_crypto\.env
+2025-07-18 17:45:14,090 - backend.utils.env_loader:77 - INFO - ✅ GEMINI_API_KEY: AIzaSyDz...
+2025-07-18 17:45:14,090 - backend.utils.env_loader:84 - INFO - ✅ REDIS_URL: redis://...
+2025-07-18 17:45:14,090 - backend.utils.env_loader:84 - INFO - ✅ GOOGLE_SEARCH_API_KEY: your_goo...
+2025-07-18 17:45:14,091 - backend.utils.env_loader:84 - INFO - ✅ GOOGLE_SEARCH_ENGINE_ID: your_sea...
+2025-07-18 17:45:14,091 - backend.utils.env_loader:95 - INFO - ✅ 所有必需的环境变量都已正确设置
+2025-07-18 17:45:14,205 - backend.services.ai_analyzer:24 - INFO - ✅ 高效Google搜索引擎已加载
+2025-07-18 17:45:14,209 - backend.main:101 - INFO - 正在启动AI Crypto Token Analysis服务...
+2025-07-18 17:45:14,226 - backend.services.message_queue:30 - INFO - Redis连接成功建立
+2025-07-18 17:45:14,226 - backend.services.ai_analyzer:51 - INFO - AI分析器初始化，最大并发AI请求数: 1
+2025-07-18 17:45:14,227 - backend.services.ai_analyzer:59 - INFO - use gemini key AIzaSyDz...
+2025-07-18 17:45:14,227 - backend.services.ai_analyzer:65 - INFO - Gemini AI服务初始化完成
+2025-07-18 17:45:14,227 - backend.services.ai_analyzer:68 - INFO - 成功找 tweet 搜索路由
+2025-07-18 17:45:14,228 - backend.main:124 - INFO - 所有服务已成功启动
+2025-07-18 17:45:14,228 - backend.services.ai_analyzer:108 - INFO - AI分析消费者已启动
+2025-07-18 17:45:14,228 - backend.services.token_monitor:41 - INFO - 启动代币监控服务...
+2025-07-18 17:45:14,232 - backend.main:198 - INFO - 开始监听分析结果...
+2025-07-18 17:45:25,595 - backend.services.token_monitor:70 - INFO - WebSocket连接已建立
+2025-07-18 17:45:25,596 - backend.services.token_monitor:83 - INFO - 已订阅代币创建事件...
+2025-07-18 17:45:51,428 - backend.services.token_monitor:124 - INFO - 🪙 准备调用回调函数处理代币: Meman 
+2025-07-18 17:45:51,429 - backend.services.token_monitor:134 - INFO - 🪙 异步任务已提交: Meman 
+2025-07-18 17:45:51,429 - backend.main:144 - INFO - 🪙 [START] handle_new_token 开始处理: Meman 
+2025-07-18 17:45:51,430 - backend.main:147 - INFO - 🪙 检测到新代币: Meman  (Meme Man)
+2025-07-18 17:45:51,431 - backend.main:148 - INFO - 🪙 代币详情: mint=Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump, 总供应量=1000000000
+2025-07-18 17:45:51,432 - backend.main:151 - INFO - 📤 [STEP 1] 准备创建代币消息: Meman 
+2025-07-18 17:45:51,433 - backend.main:158 - INFO - 📤 [STEP 2] 序列化消息: Meman 
+2025-07-18 17:45:51,434 - backend.main:160 - INFO - 📤 [STEP 3] 准备广播新代币消息: Meman 
+2025-07-18 17:45:51,435 - backend.main:161 - INFO - 📤 消息内容: {"type": "new_token", "data": {"name": "Meme Man", "symbol": "Meman ", "uri": "https://ipfs.io/ipfs/QmfGQ23Zqco7rcJhsYYA9JS7XindxGFqPY9rJMBT6drB3C", "mint": "Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump", "bonding_curve": "EXXpLunKJW6od1US4eKyeXz25FyBspxDatPFcx5NSd4a", "user": "i89GYEqEkf8CbRirYy2Bk...
+2025-07-18 17:45:51,436 - backend.main:163 - INFO - 📤 [STEP 4] 调用manager.broadcast: Meman 
+2025-07-18 17:45:51,437 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:45:51,437 - backend.main:166 - INFO - 📤 [STEP 5] 广播完成: Meman 
+2025-07-18 17:45:51,437 - backend.main:174 - INFO - 📝 [STEP 6] 准备添加到分析队列: Meman 
+2025-07-18 17:45:51,438 - backend.main:176 - INFO - 📝 将代币 Meman  添加到分析队列
+2025-07-18 17:45:51,438 - backend.services.message_queue:53 - INFO - task_data = {'token_data': {'name': 'Meme Man', 'symbol': 'Meman ', 'uri': 'https://ipfs.io/ipfs/QmfGQ23Zqco7rcJhsYYA9JS7XindxGFqPY9rJMBT6drB3C', 'mint': 'Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump', 'bonding_curve': 'EXXpLunKJW6od1US4eKyeXz25FyBspxDatPFcx5NSd4a', 'user': 'i89GYEqEkf8CbRirYy2BkEMMQJwdfE6SxhBz7XDBxUR', 'creator': 'i89GYEqEkf8CbRirYy2BkEMMQJwdfE6SxhBz7XDBxUR', 'timestamp': 1752831967, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:45:51'}, 'created_at': '2025-07-18 17:45:51', 'task_id': 'Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump_cd21f7a1-8f91-4735-beb0-6197541f25ec'}
+2025-07-18 17:45:51,447 - backend.services.message_queue:72 - INFO - 任务已添加到Redis队列: Meman 
+2025-07-18 17:45:51,448 - backend.services.message_queue:81 - INFO - 代币分析任务已入队: Meman  (Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump)
+2025-07-18 17:45:51,448 - backend.services.ai_analyzer:130 - INFO - 开始处理分析任务: {'token_data': {'name': 'Meme Man', 'symbol': 'Meman ', 'uri': 'https://ipfs.io/ipfs/QmfGQ23Zqco7rcJhsYYA9JS7XindxGFqPY9rJMBT6drB3C', 'mint': 'Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump', 'bonding_curve': 'EXXpLunKJW6od1US4eKyeXz25FyBspxDatPFcx5NSd4a', 'user': 'i89GYEqEkf8CbRirYy2BkEMMQJwdfE6SxhBz7XDBxUR', 'creator': 'i89GYEqEkf8CbRirYy2BkEMMQJwdfE6SxhBz7XDBxUR', 'timestamp': 1752831967, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:45:51'}, 'created_at': '2025-07-18 17:45:51', 'task_id': 'Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump_cd21f7a1-8f91-4735-beb0-6197541f25ec'}
+2025-07-18 17:45:51,449 - backend.services.ai_analyzer:138 - INFO - 开始分析代币: Meman 
+2025-07-18 17:45:51,451 - backend.services.message_queue:152 - INFO - 分析进度更新: Meman  - 10.0%
+2025-07-18 17:45:51,452 - backend.services.ai_analyzer:255 - INFO - 🔍 使用高效Google搜索引擎搜索: Meman 
+2025-07-18 17:45:51,452 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $Meman [Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump] cryptocurrency (需要6个结果)
+2025-07-18 17:45:51,452 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:45:51,453 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump", "token_symbol": "Meman ", "token_name": "Meme Man", "status": "ANALYZING", "progress": 10.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:45:51.450198"}
+2025-07-18 17:45:52,552 - backend.google_engine:169 - WARNING - 查询 '$Meman [Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump] cryptocurrency' 只找到 0 个结果，需要 6 个结果
+2025-07-18 17:45:52,553 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $Meman [Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump] cryptocurrency (获得0个结果)
+2025-07-18 17:45:52,556 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $Meman [Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump] token pump.fun (需要6个结果)
+2025-07-18 17:45:54,080 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $Meman [Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump] token pump.fun (获得6个结果)
+2025-07-18 17:45:54,082 - backend.services.ai_analyzer:267 - INFO - ✅ Google搜索获得 6 个结果
+2025-07-18 17:45:54,083 - backend.services.ai_analyzer:290 - INFO - 🔍 总共获得 6 个搜索结果
+2025-07-18 17:45:54,084 - backend.services.message_queue:152 - INFO - 分析进度更新: Meman  - 30.0%
+2025-07-18 17:45:54,085 - backend.services.ai_analyzer:232 - INFO - use tweet search for $Meman (Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump)
+2025-07-18 17:45:54,085 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:45:54,087 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump", "token_symbol": "Meman ", "token_name": "Meme Man", "status": "ANALYZING", "progress": 30.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:45:54.083571"}
+2025-07-18 17:45:58,172 - backend.services.ai_analyzer:244 - ERROR - 推特搜索引擎失败
+2025-07-18 17:45:58,174 - backend.services.message_queue:152 - INFO - 分析进度更新: Meman  - 50.0%
+2025-07-18 17:45:58,174 - backend.services.ai_analyzer:82 - INFO - 🤖 开始AI请求 (活跃: 1/1, 总计: 1)
+2025-07-18 17:45:58,174 - backend.services.ai_analyzer:350 - INFO - enter _do_ai_analyze_simple result = [WebSearchResult(title='PUMP.FUN TOKEN (PUMP)', url='https://pump.fun/coin/FveeaNqaQDE49pPxpqAoXGwgo3gcRaVVXwcsbzbppump', snippet=' pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ', relevance_score=95.0), WebSearchResult(title='The Daily: Pump.fun confirms PUMP token sale plans, hacker drains ...', url='https://www.theblock.co/post/361840/the-daily-pump-fun-confirms-pump-token-sale-plans-hacker-drains-over-40-million-from-gmx-and-more', snippet=' 9 Jul 2025  ·  Solana-based memecoin launch platform Pump.fun will begin its first and only public token sale on July 12 through July 15, aiming to raise $600\xa0... ', relevance_score=92.0), WebSearchResult(title='Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today', url='https://www.coingecko.com/en/coins/pump-fun', snippet=" Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular\xa0... ", relevance_score=89.0), WebSearchResult(title='Pump.fun Token (pump)', url='https://pump.fun/coin/BNatR5BFgqTL8H38mkBPwVfut3uU3JsT2VJuDkVidNcP', snippet=' pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ', relevance_score=86.0), WebSearchResult(title='Pump.fun - Tokenomics, Supply & Release Schedule - Token Unlocks', url='https://tokenomist.ai/pump-fun', snippet=' 5 days ago  ·  Pump.fun (PUMP) tokenomics data includes detailed insights on supply, allocation, emissions, and release schedules. ', relevance_score=83.0), WebSearchResult(title='Pump Fun', url='https://pump.fun/board', snippet=' The new $XRPB-SOL token is not for buying or selling — it powers boosts, memberships, storefront upgrades, and rewards across the RippleBids marketplace. Fast\xa0... ', relevance_score=80.0)]
+2025-07-18 17:45:58,176 - backend.services.ai_analyzer:360 - INFO - tweet_context = 
+2025-07-18 17:45:58,176 - backend.services.ai_analyzer:392 - INFO - gemini simple analyze prompt 
+            分析以下加密货币代币的叙事背景：
+            
+            - 代币名称: Meme Man
+            - 代币符号: Meman 
+            - 总供应量: 1,000,000,000
+            - 虚拟代币储备: 1,073,000,000
+            - 虚拟SOL储备: 30
+            - 实际代币储备: 793,100,000
+            
+            网络搜索结果:
+            标题: PUMP.FUN TOKEN (PUMP)
+摘要:  pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. 
+链接: https://pump.fun/coin/FveeaNqaQDE49pPxpqAoXGwgo3gcRaVVXwcsbzbppump
+标题: The Daily: Pump.fun confirms PUMP token sale plans, hacker drains ...
+摘要:  9 Jul 2025  ·  Solana-based memecoin launch platform Pump.fun will begin its first and only public token sale on July 12 through July 15, aiming to raise $600 ... 
+链接: https://www.theblock.co/post/361840/the-daily-pump-fun-confirms-pump-token-sale-plans-hacker-drains-over-40-million-from-gmx-and-more
+标题: Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today
+摘要:  Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular ... 
+链接: https://www.coingecko.com/en/coins/pump-fun
+标题: Pump.fun Token (pump)
+摘要:  pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. 
+链接: https://pump.fun/coin/BNatR5BFgqTL8H38mkBPwVfut3uU3JsT2VJuDkVidNcP
+标题: Pump.fun - Tokenomics, Supply & Release Schedule - Token Unlocks
+摘要:  5 days ago  ·  Pump.fun (PUMP) tokenomics data includes detailed insights on supply, allocation, emissions, and release schedules. 
+链接: https://tokenomist.ai/pump-fun
+            
+            推文结果:
+            
+            
+            请分析：
+                1. 项目的核心叙事和概念
+                2. 风险评分: 0-100 (100为最高风险)
+                3. 价格预测
+                4. 简洁但全面的总结
+                5. 投资建议
+            请以JSON格式返回：
+            {
+                "narrative_analysis": "叙事分析",
+                "risk_assessment": "风险评估",
+                "market_analysis": "市场分析",
+                "ai_summary": "AI总结",
+                "investment_recommendation": "投资建议"
+            }
+            
+2025-07-18 17:45:58,178 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:45:58,179 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump", "token_symbol": "Meman ", "token_name": "Meme Man", "status": "ANALYZING", "progress": 50.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:45:58.173694"}
+2025-07-18 17:46:10,144 - backend.services.ai_analyzer:401 - ERROR - Gemini API调用失败: 400 User location is not supported for the API use.
+2025-07-18 17:46:10,144 - backend.services.ai_analyzer:98 - ERROR - ❌ AI请求失败: 400 User location is not supported for the API use. (完成: 0, 失败: 1)
+2025-07-18 17:46:10,145 - backend.services.ai_analyzer:413 - ERROR - _ai_analyze_simple error 400 User location is not supported for the API use.
+2025-07-18 17:46:10,146 - backend.services.message_queue:180 - INFO - 分析完成: Meman 
+2025-07-18 17:46:10,147 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:10,147 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_complete", "data": {"token_mint": "Ew5fGxgJZmtWP7kfguri1JsfR9DBCdKMcKA2ZStApump", "token_symbol": "Meman ", "token_name": "Meme Man", "status": "COMPLETED", "progress": 100.0, "narrative_analysis": "\u53d9\u4e8b\u5206\u6790\u5931\u8d25", "risk_assessment": "\u98ce\u9669\u8bc4\u4f30\u5931\u8d25", "market_analysis": "\u5e02\u573a\u5206\u6790\u5931\u8d25", "web_search_results": [{"title": "PUMP.FUN TOKEN (PUMP)", "url": "https://pump.fun/coin/FveeaNqaQDE49pPxpqAoXGwgo3gcRaVVXwcsbzbppump", "snippet": " pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ", "relevance_score": 95.0}, {"title": "The Daily: Pump.fun confirms PUMP token sale plans, hacker drains ...", "url": "https://www.theblock.co/post/361840/the-daily-pump-fun-confirms-pump-token-sale-plans-hacker-drains-over-40-million-from-gmx-and-more", "snippet": " 9 Jul 2025  \u00b7  Solana-based memecoin launch platform Pump.fun will begin its first and only public token sale on July 12 through July 15, aiming to raise $600\u00a0... ", "relevance_score": 92.0}, {"title": "Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today", "url": "https://www.coingecko.com/en/coins/pump-fun", "snippet": " Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular\u00a0... ", "relevance_score": 89.0}, {"title": "Pump.fun Token (pump)", "url": "https://pump.fun/coin/BNatR5BFgqTL8H38mkBPwVfut3uU3JsT2VJuDkVidNcP", "snippet": " pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ", "relevance_score": 86.0}, {"title": "Pump.fun - Tokenomics, Supply & Release Schedule - Token Unlocks", "url": "https://tokenomist.ai/pump-fun", "snippet": " 5 days ago  \u00b7  Pump.fun (PUMP) tokenomics data includes detailed insights on supply, allocation, emissions, and release schedules. ", "relevance_score": 83.0}, {"title": "Pump Fun", "url": "https://pump.fun/board", "snippet": " The new $XRPB-SOL token is not for buying or selling \u2014 it powers boosts, memberships, storefront upgrades, and rewards across the RippleBids marketplace. Fast\u00a0... ", "relevance_score": 80.0}], "tweet_result": [], "ai_summary": "AI\u603b\u7ed3\u5931\u8d25", "investment_recommendation": "\u6295\u8d44\u5efa\u8bae\u5931\u8d25", "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": "2025-07-18T17:46:10.146120", "error_message": null}, "timestamp": "2025-07-18T17:46:10.146120"}
+2025-07-18 17:46:14,952 - backend.services.token_monitor:124 - INFO - 🪙 准备调用回调函数处理代币: LAMB
+2025-07-18 17:46:14,953 - backend.main:144 - INFO - 🪙 [START] handle_new_token 开始处理: LAMB
+2025-07-18 17:46:14,953 - backend.services.token_monitor:134 - INFO - 🪙 异步任务已提交: LAMB
+2025-07-18 17:46:14,954 - backend.main:147 - INFO - 🪙 检测到新代币: LAMB (Lamb Token)
+2025-07-18 17:46:14,956 - backend.main:148 - INFO - 🪙 代币详情: mint=6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump, 总供应量=1000000000
+2025-07-18 17:46:14,958 - backend.main:151 - INFO - 📤 [STEP 1] 准备创建代币消息: LAMB
+2025-07-18 17:46:14,962 - backend.main:158 - INFO - 📤 [STEP 2] 序列化消息: LAMB
+2025-07-18 17:46:14,963 - backend.main:160 - INFO - 📤 [STEP 3] 准备广播新代币消息: LAMB
+2025-07-18 17:46:14,963 - backend.main:161 - INFO - 📤 消息内容: {"type": "new_token", "data": {"name": "Lamb Token", "symbol": "LAMB", "uri": "https://ipfs.io/ipfs/bafkreifadavljapmbsf2h7bnxovsoclx4saexe3i46khx2msuxzn47sfgq", "mint": "6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump", "bonding_curve": "HJMXuFANv2955zzpHXb6kjQitMLsq74b35xAbizz25yk", "user": "Ec67rbcx...
+2025-07-18 17:46:14,964 - backend.main:163 - INFO - 📤 [STEP 4] 调用manager.broadcast: LAMB
+2025-07-18 17:46:14,964 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:14,965 - backend.main:166 - INFO - 📤 [STEP 5] 广播完成: LAMB
+2025-07-18 17:46:14,965 - backend.main:174 - INFO - 📝 [STEP 6] 准备添加到分析队列: LAMB
+2025-07-18 17:46:14,966 - backend.main:176 - INFO - 📝 将代币 LAMB 添加到分析队列
+2025-07-18 17:46:14,966 - backend.services.message_queue:53 - INFO - task_data = {'token_data': {'name': 'Lamb Token', 'symbol': 'LAMB', 'uri': 'https://ipfs.io/ipfs/bafkreifadavljapmbsf2h7bnxovsoclx4saexe3i46khx2msuxzn47sfgq', 'mint': '6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump', 'bonding_curve': 'HJMXuFANv2955zzpHXb6kjQitMLsq74b35xAbizz25yk', 'user': 'Ec67rbcx34ELoFQNc7tHcPpJ2uC3V5nbmxYg5QtqiU6Q', 'creator': 'Ec67rbcx34ELoFQNc7tHcPpJ2uC3V5nbmxYg5QtqiU6Q', 'timestamp': 1752831990, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:46:14'}, 'created_at': '2025-07-18 17:46:14', 'task_id': '6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump_b33da0d3-982b-4e32-89da-f20a10f1ae84'}
+2025-07-18 17:46:14,968 - backend.services.message_queue:72 - INFO - 任务已添加到Redis队列: LAMB
+2025-07-18 17:46:14,969 - backend.services.message_queue:81 - INFO - 代币分析任务已入队: LAMB (6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump)
+2025-07-18 17:46:15,004 - backend.services.ai_analyzer:130 - INFO - 开始处理分析任务: {'token_data': {'name': 'Lamb Token', 'symbol': 'LAMB', 'uri': 'https://ipfs.io/ipfs/bafkreifadavljapmbsf2h7bnxovsoclx4saexe3i46khx2msuxzn47sfgq', 'mint': '6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump', 'bonding_curve': 'HJMXuFANv2955zzpHXb6kjQitMLsq74b35xAbizz25yk', 'user': 'Ec67rbcx34ELoFQNc7tHcPpJ2uC3V5nbmxYg5QtqiU6Q', 'creator': 'Ec67rbcx34ELoFQNc7tHcPpJ2uC3V5nbmxYg5QtqiU6Q', 'timestamp': 1752831990, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:46:14'}, 'created_at': '2025-07-18 17:46:14', 'task_id': '6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump_b33da0d3-982b-4e32-89da-f20a10f1ae84'}
+2025-07-18 17:46:15,006 - backend.services.ai_analyzer:138 - INFO - 开始分析代币: LAMB
+2025-07-18 17:46:15,008 - backend.services.message_queue:152 - INFO - 分析进度更新: LAMB - 10.0%
+2025-07-18 17:46:15,008 - backend.services.ai_analyzer:255 - INFO - 🔍 使用高效Google搜索引擎搜索: LAMB
+2025-07-18 17:46:15,009 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:15,009 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $LAMB[6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump] cryptocurrency (需要6个结果)
+2025-07-18 17:46:15,010 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump", "token_symbol": "LAMB", "token_name": "Lamb Token", "status": "ANALYZING", "progress": 10.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:15.007075"}
+2025-07-18 17:46:15,660 - backend.services.token_monitor:124 - INFO - 🪙 准备调用回调函数处理代币: HUMMO
+2025-07-18 17:46:15,661 - backend.services.token_monitor:134 - INFO - 🪙 异步任务已提交: HUMMO
+2025-07-18 17:46:15,661 - backend.main:144 - INFO - 🪙 [START] handle_new_token 开始处理: HUMMO
+2025-07-18 17:46:15,662 - backend.main:147 - INFO - 🪙 检测到新代币: HUMMO (HUMMO)
+2025-07-18 17:46:15,663 - backend.main:148 - INFO - 🪙 代币详情: mint=e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk, 总供应量=1000000000
+2025-07-18 17:46:15,665 - backend.main:151 - INFO - 📤 [STEP 1] 准备创建代币消息: HUMMO
+2025-07-18 17:46:15,665 - backend.main:158 - INFO - 📤 [STEP 2] 序列化消息: HUMMO
+2025-07-18 17:46:15,665 - backend.main:160 - INFO - 📤 [STEP 3] 准备广播新代币消息: HUMMO
+2025-07-18 17:46:15,665 - backend.main:161 - INFO - 📤 消息内容: {"type": "new_token", "data": {"name": "HUMMO", "symbol": "HUMMO", "uri": "https://ipfs.io/ipfs/QmfBKavxCgFgfff6Tv7hyvKpC9BdAmee5vbeLEcBViZPTs", "mint": "e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk", "bonding_curve": "rCydGnH8aiPLqbLHTgavkDBuqTCW8JDCd4FZA9fp86P", "user": "szarXFYcMwnoWSrqAYVh53u1jpV...
+2025-07-18 17:46:15,666 - backend.main:163 - INFO - 📤 [STEP 4] 调用manager.broadcast: HUMMO
+2025-07-18 17:46:15,666 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:15,667 - backend.main:166 - INFO - 📤 [STEP 5] 广播完成: HUMMO
+2025-07-18 17:46:15,667 - backend.main:174 - INFO - 📝 [STEP 6] 准备添加到分析队列: HUMMO
+2025-07-18 17:46:15,667 - backend.main:176 - INFO - 📝 将代币 HUMMO 添加到分析队列
+2025-07-18 17:46:15,667 - backend.services.message_queue:53 - INFO - task_data = {'token_data': {'name': 'HUMMO', 'symbol': 'HUMMO', 'uri': 'https://ipfs.io/ipfs/QmfBKavxCgFgfff6Tv7hyvKpC9BdAmee5vbeLEcBViZPTs', 'mint': 'e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk', 'bonding_curve': 'rCydGnH8aiPLqbLHTgavkDBuqTCW8JDCd4FZA9fp86P', 'user': 'szarXFYcMwnoWSrqAYVh53u1jpVArf7rUkmn9mK77b4', 'creator': 'szarXFYcMwnoWSrqAYVh53u1jpVArf7rUkmn9mK77b4', 'timestamp': 1752831990, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:46:15'}, 'created_at': '2025-07-18 17:46:15', 'task_id': 'e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk_b51020de-6771-44b7-a7e7-df58c27e502e'}
+2025-07-18 17:46:15,669 - backend.services.ai_analyzer:130 - INFO - 开始处理分析任务: {'token_data': {'name': 'HUMMO', 'symbol': 'HUMMO', 'uri': 'https://ipfs.io/ipfs/QmfBKavxCgFgfff6Tv7hyvKpC9BdAmee5vbeLEcBViZPTs', 'mint': 'e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk', 'bonding_curve': 'rCydGnH8aiPLqbLHTgavkDBuqTCW8JDCd4FZA9fp86P', 'user': 'szarXFYcMwnoWSrqAYVh53u1jpVArf7rUkmn9mK77b4', 'creator': 'szarXFYcMwnoWSrqAYVh53u1jpVArf7rUkmn9mK77b4', 'timestamp': 1752831990, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:46:15'}, 'created_at': '2025-07-18 17:46:15', 'task_id': 'e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk_b51020de-6771-44b7-a7e7-df58c27e502e'}
+2025-07-18 17:46:15,670 - backend.services.ai_analyzer:138 - INFO - 开始分析代币: HUMMO
+2025-07-18 17:46:15,671 - backend.services.message_queue:72 - INFO - 任务已添加到Redis队列: HUMMO
+2025-07-18 17:46:15,672 - backend.services.message_queue:81 - INFO - 代币分析任务已入队: HUMMO (e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk)
+2025-07-18 17:46:15,674 - backend.services.message_queue:152 - INFO - 分析进度更新: HUMMO - 10.0%
+2025-07-18 17:46:15,675 - backend.services.ai_analyzer:255 - INFO - 🔍 使用高效Google搜索引擎搜索: HUMMO
+2025-07-18 17:46:15,675 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $HUMMO[e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk] cryptocurrency (需要6个结果)
+2025-07-18 17:46:15,675 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:15,676 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk", "token_symbol": "HUMMO", "token_name": "HUMMO", "status": "ANALYZING", "progress": 10.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:15.670954"}
+2025-07-18 17:46:15,956 - backend.google_engine:169 - WARNING - 查询 '$LAMB[6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump] cryptocurrency' 只找到 0 个结果，需要 6 个结果
+2025-07-18 17:46:15,957 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $LAMB[6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump] cryptocurrency (获得0个结果)
+2025-07-18 17:46:15,959 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $LAMB[6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump] token pump.fun (需要6个结果)
+2025-07-18 17:46:16,789 - backend.google_engine:169 - WARNING - 查询 '$HUMMO[e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk] cryptocurrency' 只找到 0 个结果，需要 6 个结果
+2025-07-18 17:46:16,789 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $HUMMO[e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk] cryptocurrency (获得0个结果)
+2025-07-18 17:46:16,791 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $HUMMO[e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk] token pump.fun (需要6个结果)
+2025-07-18 17:46:17,512 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $LAMB[6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump] token pump.fun (获得6个结果)
+2025-07-18 17:46:17,514 - backend.services.ai_analyzer:267 - INFO - ✅ Google搜索获得 6 个结果
+2025-07-18 17:46:17,515 - backend.services.ai_analyzer:290 - INFO - 🔍 总共获得 6 个搜索结果
+2025-07-18 17:46:17,516 - backend.services.message_queue:152 - INFO - 分析进度更新: LAMB - 30.0%
+2025-07-18 17:46:17,516 - backend.services.ai_analyzer:232 - INFO - use tweet search for $LAMB(6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump)
+2025-07-18 17:46:17,517 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:17,518 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump", "token_symbol": "LAMB", "token_name": "Lamb Token", "status": "ANALYZING", "progress": 30.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:17.515779"}
+2025-07-18 17:46:18,319 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $HUMMO[e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk] token pump.fun (获得6个结果)
+2025-07-18 17:46:18,323 - backend.services.ai_analyzer:267 - INFO - ✅ Google搜索获得 6 个结果
+2025-07-18 17:46:18,324 - backend.services.ai_analyzer:290 - INFO - 🔍 总共获得 6 个搜索结果
+2025-07-18 17:46:18,325 - backend.services.message_queue:152 - INFO - 分析进度更新: HUMMO - 30.0%
+2025-07-18 17:46:18,325 - backend.services.ai_analyzer:232 - INFO - use tweet search for $HUMMO(e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk)
+2025-07-18 17:46:18,326 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:18,327 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk", "token_symbol": "HUMMO", "token_name": "HUMMO", "status": "ANALYZING", "progress": 30.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:18.324034"}
+2025-07-18 17:46:21,592 - backend.services.ai_analyzer:244 - ERROR - 推特搜索引擎失败
+2025-07-18 17:46:21,594 - backend.services.message_queue:152 - INFO - 分析进度更新: LAMB - 50.0%
+2025-07-18 17:46:21,594 - backend.services.ai_analyzer:82 - INFO - 🤖 开始AI请求 (活跃: 1/1, 总计: 2)
+2025-07-18 17:46:21,595 - backend.services.ai_analyzer:350 - INFO - enter _do_ai_analyze_simple result = [WebSearchResult(title='lamb (Lamb) - pump.fun', url='https://www.pump.fun/64b21HXczbYRT7tjFLMSGt92ray7ny2JR9YbA6Tspump', snippet=' pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ', relevance_score=95.0), WebSearchResult(title='Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today', url='https://www.coingecko.com/en/coins/pump-fun', snippet=" Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular\xa0... ", relevance_score=92.0), WebSearchResult(title='PUMP FUN COIN (PUMP)', url='https://pump.fun/coin/5YvxuK5gEbhfMQkgtPhYTQc4vaeVCtWw47q4RyHJXSuX', snippet=' PumpFunCoin is a high-energy, community-driven meme coin designed for those who love the excitement of fast-paced price action. ', relevance_score=89.0), WebSearchResult(title='create new coin - Pump Fun', url='https://pump.fun/create', snippet=' Pump allows anyone to create coins. All coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ', relevance_score=86.0), WebSearchResult(title='Pump.fun price today, PUMP to USD live price, marketcap and chart', url='https://coinmarketcap.com/currencies/pump-fun/', snippet=' The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1,183,414,216 USD. We update our PUMP to USD price in real-time. ', relevance_score=83.0), WebSearchResult(title='PUMP.FUN TOKEN - YAY OR NAY????? (Facts based.) - YouTube', url='https://www.youtube.com/watch?v=Ho-DdgPkTJA', snippet=' 3 days ago  ·  Pump.fun is listing their token today! Will it be an easy 10X opportunity? Here is an honest factual opinion. Join the biggest live session\xa0... ', relevance_score=80.0)]
+2025-07-18 17:46:21,597 - backend.services.ai_analyzer:360 - INFO - tweet_context = 
+2025-07-18 17:46:21,597 - backend.services.ai_analyzer:392 - INFO - gemini simple analyze prompt 
+            分析以下加密货币代币的叙事背景：
+            
+            - 代币名称: Lamb Token
+            - 代币符号: LAMB
+            - 总供应量: 1,000,000,000
+            - 虚拟代币储备: 1,073,000,000
+            - 虚拟SOL储备: 30
+            - 实际代币储备: 793,100,000
+            
+            网络搜索结果:
+            标题: lamb (Lamb) - pump.fun
+摘要:  pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. 
+链接: https://www.pump.fun/64b21HXczbYRT7tjFLMSGt92ray7ny2JR9YbA6Tspump
+标题: Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today
+摘要:  Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular ... 
+链接: https://www.coingecko.com/en/coins/pump-fun
+标题: PUMP FUN COIN (PUMP)
+摘要:  PumpFunCoin is a high-energy, community-driven meme coin designed for those who love the excitement of fast-paced price action. 
+链接: https://pump.fun/coin/5YvxuK5gEbhfMQkgtPhYTQc4vaeVCtWw47q4RyHJXSuX
+标题: create new coin - Pump Fun
+摘要:  Pump allows anyone to create coins. All coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. 
+链接: https://pump.fun/create
+标题: Pump.fun price today, PUMP to USD live price, marketcap and chart
+摘要:  The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1,183,414,216 USD. We update our PUMP to USD price in real-time. 
+链接: https://coinmarketcap.com/currencies/pump-fun/
+            
+            推文结果:
+            
+            
+            请分析：
+                1. 项目的核心叙事和概念
+                2. 风险评分: 0-100 (100为最高风险)
+                3. 价格预测
+                4. 简洁但全面的总结
+                5. 投资建议
+            请以JSON格式返回：
+            {
+                "narrative_analysis": "叙事分析",
+                "risk_assessment": "风险评估",
+                "market_analysis": "市场分析",
+                "ai_summary": "AI总结",
+                "investment_recommendation": "投资建议"
+            }
+            
+2025-07-18 17:46:21,603 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:21,605 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump", "token_symbol": "LAMB", "token_name": "Lamb Token", "status": "ANALYZING", "progress": 50.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:21.593738"}
+2025-07-18 17:46:21,883 - backend.services.ai_analyzer:401 - ERROR - Gemini API调用失败: 400 User location is not supported for the API use.
+2025-07-18 17:46:21,884 - backend.services.ai_analyzer:98 - ERROR - ❌ AI请求失败: 400 User location is not supported for the API use. (完成: 0, 失败: 2)
+2025-07-18 17:46:21,884 - backend.services.ai_analyzer:413 - ERROR - _ai_analyze_simple error 400 User location is not supported for the API use.
+2025-07-18 17:46:21,886 - backend.services.message_queue:180 - INFO - 分析完成: LAMB
+2025-07-18 17:46:21,886 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:21,887 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_complete", "data": {"token_mint": "6VJtqqfWb987qH5BrDf25PpTHyPCFXSA3EZVFBpRpump", "token_symbol": "LAMB", "token_name": "Lamb Token", "status": "COMPLETED", "progress": 100.0, "narrative_analysis": "\u53d9\u4e8b\u5206\u6790\u5931\u8d25", "risk_assessment": "\u98ce\u9669\u8bc4\u4f30\u5931\u8d25", "market_analysis": "\u5e02\u573a\u5206\u6790\u5931\u8d25", "web_search_results": [{"title": "lamb (Lamb) - pump.fun", "url": "https://www.pump.fun/64b21HXczbYRT7tjFLMSGt92ray7ny2JR9YbA6Tspump", "snippet": " pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ", "relevance_score": 95.0}, {"title": "Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today", "url": "https://www.coingecko.com/en/coins/pump-fun", "snippet": " Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular\u00a0... ", "relevance_score": 92.0}, {"title": "PUMP FUN COIN (PUMP)", "url": "https://pump.fun/coin/5YvxuK5gEbhfMQkgtPhYTQc4vaeVCtWw47q4RyHJXSuX", "snippet": " PumpFunCoin is a high-energy, community-driven meme coin designed for those who love the excitement of fast-paced price action. ", "relevance_score": 89.0}, {"title": "create new coin - Pump Fun", "url": "https://pump.fun/create", "snippet": " Pump allows anyone to create coins. All coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ", "relevance_score": 86.0}, {"title": "Pump.fun price today, PUMP to USD live price, marketcap and chart", "url": "https://coinmarketcap.com/currencies/pump-fun/", "snippet": " The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1,183,414,216 USD. We update our PUMP to USD price in real-time. ", "relevance_score": 83.0}, {"title": "PUMP.FUN TOKEN - YAY OR NAY????? (Facts based.) - YouTube", "url": "https://www.youtube.com/watch?v=Ho-DdgPkTJA", "snippet": " 3 days ago  \u00b7  Pump.fun is listing their token today! Will it be an easy 10X opportunity? Here is an honest factual opinion. Join the biggest live session\u00a0... ", "relevance_score": 80.0}], "tweet_result": [], "ai_summary": "AI\u603b\u7ed3\u5931\u8d25", "investment_recommendation": "\u6295\u8d44\u5efa\u8bae\u5931\u8d25", "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": "2025-07-18T17:46:21.885170", "error_message": null}, "timestamp": "2025-07-18T17:46:21.885170"}
+2025-07-18 17:46:22,395 - backend.services.ai_analyzer:244 - ERROR - 推特搜索引擎失败
+2025-07-18 17:46:22,396 - backend.services.message_queue:152 - INFO - 分析进度更新: HUMMO - 50.0%
+2025-07-18 17:46:22,396 - backend.services.ai_analyzer:82 - INFO - 🤖 开始AI请求 (活跃: 1/1, 总计: 3)
+2025-07-18 17:46:22,397 - backend.services.ai_analyzer:350 - INFO - enter _do_ai_analyze_simple result = [WebSearchResult(title='Pump Fun', url='https://pump.fun/board', snippet=' The new $XRPB-SOL token is not for buying or selling — it powers boosts, memberships, storefront upgrades, and rewards across the RippleBids marketplace. Fast\xa0... ', relevance_score=95.0), WebSearchResult(title='Pump.fun Token (pump)', url='https://pump.fun/coin/BNatR5BFgqTL8H38mkBPwVfut3uU3JsT2VJuDkVidNcP', snippet=' pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ', relevance_score=92.0), WebSearchResult(title='Pump.fun - Tokenomics, Supply & Release Schedule - Token Unlocks', url='https://tokenomist.ai/pump-fun', snippet=' 5 days ago  ·  Pump.fun (PUMP) tokenomics data includes detailed insights on supply, allocation, emissions, and release schedules. ', relevance_score=89.0), WebSearchResult(title='PUMP FUN COIN (PUMP)', url='https://pump.fun/coin/5YvxuK5gEbhfMQkgtPhYTQc4vaeVCtWw47q4RyHJXSuX', snippet=' PumpFunCoin is a high-energy, community-driven meme coin designed for those who love the excitement of fast-paced price action. ', relevance_score=86.0), WebSearchResult(title='Pump.fun price today, PUMP to USD live price, marketcap and chart', url='https://coinmarketcap.com/currencies/pump-fun/', snippet=' The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1183414215.79 USD. We update our PUMP to USD price in real-time. ', relevance_score=83.0), WebSearchResult(title='PUMP.FUN (PUMPFUN)', url='https://pump.fun/coin/A4TtLUbeexeeufNDEzSzDWmDbc2KwRwgthQ6tYRNpump', snippet=' Pump allows anyone to create coins. All coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ', relevance_score=80.0)]
+2025-07-18 17:46:22,398 - backend.services.ai_analyzer:360 - INFO - tweet_context = 
+2025-07-18 17:46:22,399 - backend.services.ai_analyzer:392 - INFO - gemini simple analyze prompt 
+            分析以下加密货币代币的叙事背景：
+            
+            - 代币名称: HUMMO
+            - 代币符号: HUMMO
+            - 总供应量: 1,000,000,000
+            - 虚拟代币储备: 1,073,000,000
+            - 虚拟SOL储备: 30
+            - 实际代币储备: 793,100,000
+            
+            网络搜索结果:
+            标题: Pump Fun
+摘要:  The new $XRPB-SOL token is not for buying or selling — it powers boosts, memberships, storefront upgrades, and rewards across the RippleBids marketplace. Fast ... 
+链接: https://pump.fun/board
+标题: Pump.fun Token (pump)
+摘要:  pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. 
+链接: https://pump.fun/coin/BNatR5BFgqTL8H38mkBPwVfut3uU3JsT2VJuDkVidNcP
+标题: Pump.fun - Tokenomics, Supply & Release Schedule - Token Unlocks
+摘要:  5 days ago  ·  Pump.fun (PUMP) tokenomics data includes detailed insights on supply, allocation, emissions, and release schedules. 
+链接: https://tokenomist.ai/pump-fun
+标题: PUMP FUN COIN (PUMP)
+摘要:  PumpFunCoin is a high-energy, community-driven meme coin designed for those who love the excitement of fast-paced price action. 
+链接: https://pump.fun/coin/5YvxuK5gEbhfMQkgtPhYTQc4vaeVCtWw47q4RyHJXSuX
+标题: Pump.fun price today, PUMP to USD live price, marketcap and chart
+摘要:  The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1183414215.79 USD. We update our PUMP to USD price in real-time. 
+链接: https://coinmarketcap.com/currencies/pump-fun/
+            
+            推文结果:
+            
+            
+            请分析：
+                1. 项目的核心叙事和概念
+                2. 风险评分: 0-100 (100为最高风险)
+                3. 价格预测
+                4. 简洁但全面的总结
+                5. 投资建议
+            请以JSON格式返回：
+            {
+                "narrative_analysis": "叙事分析",
+                "risk_assessment": "风险评估",
+                "market_analysis": "市场分析",
+                "ai_summary": "AI总结",
+                "investment_recommendation": "投资建议"
+            }
+            
+2025-07-18 17:46:22,401 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:22,403 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk", "token_symbol": "HUMMO", "token_name": "HUMMO", "status": "ANALYZING", "progress": 50.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:22.395274"}
+2025-07-18 17:46:22,678 - backend.services.ai_analyzer:401 - ERROR - Gemini API调用失败: 400 User location is not supported for the API use.
+2025-07-18 17:46:22,679 - backend.services.ai_analyzer:98 - ERROR - ❌ AI请求失败: 400 User location is not supported for the API use. (完成: 0, 失败: 3)
+2025-07-18 17:46:22,679 - backend.services.ai_analyzer:413 - ERROR - _ai_analyze_simple error 400 User location is not supported for the API use.
+2025-07-18 17:46:22,680 - backend.services.message_queue:180 - INFO - 分析完成: HUMMO
+2025-07-18 17:46:22,681 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:22,681 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_complete", "data": {"token_mint": "e49doiTV4H1fLskd3xuc4qmBHhpzQy37Fd62MPtbonk", "token_symbol": "HUMMO", "token_name": "HUMMO", "status": "COMPLETED", "progress": 100.0, "narrative_analysis": "\u53d9\u4e8b\u5206\u6790\u5931\u8d25", "risk_assessment": "\u98ce\u9669\u8bc4\u4f30\u5931\u8d25", "market_analysis": "\u5e02\u573a\u5206\u6790\u5931\u8d25", "web_search_results": [{"title": "Pump Fun", "url": "https://pump.fun/board", "snippet": " The new $XRPB-SOL token is not for buying or selling \u2014 it powers boosts, memberships, storefront upgrades, and rewards across the RippleBids marketplace. Fast\u00a0... ", "relevance_score": 95.0}, {"title": "Pump.fun Token (pump)", "url": "https://pump.fun/coin/BNatR5BFgqTL8H38mkBPwVfut3uU3JsT2VJuDkVidNcP", "snippet": " pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ", "relevance_score": 92.0}, {"title": "Pump.fun - Tokenomics, Supply & Release Schedule - Token Unlocks", "url": "https://tokenomist.ai/pump-fun", "snippet": " 5 days ago  \u00b7  Pump.fun (PUMP) tokenomics data includes detailed insights on supply, allocation, emissions, and release schedules. ", "relevance_score": 89.0}, {"title": "PUMP FUN COIN (PUMP)", "url": "https://pump.fun/coin/5YvxuK5gEbhfMQkgtPhYTQc4vaeVCtWw47q4RyHJXSuX", "snippet": " PumpFunCoin is a high-energy, community-driven meme coin designed for those who love the excitement of fast-paced price action. ", "relevance_score": 86.0}, {"title": "Pump.fun price today, PUMP to USD live price, marketcap and chart", "url": "https://coinmarketcap.com/currencies/pump-fun/", "snippet": " The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1183414215.79 USD. We update our PUMP to USD price in real-time. ", "relevance_score": 83.0}, {"title": "PUMP.FUN (PUMPFUN)", "url": "https://pump.fun/coin/A4TtLUbeexeeufNDEzSzDWmDbc2KwRwgthQ6tYRNpump", "snippet": " Pump allows anyone to create coins. All coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ", "relevance_score": 80.0}], "tweet_result": [], "ai_summary": "AI\u603b\u7ed3\u5931\u8d25", "investment_recommendation": "\u6295\u8d44\u5efa\u8bae\u5931\u8d25", "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": "2025-07-18T17:46:22.679726", "error_message": null}, "timestamp": "2025-07-18T17:46:22.680237"}
+2025-07-18 17:46:34,177 - backend.services.token_monitor:124 - INFO - 🪙 准备调用回调函数处理代币: INVEST
+2025-07-18 17:46:34,178 - backend.main:144 - INFO - 🪙 [START] handle_new_token 开始处理: INVEST
+
+2025-07-18 17:46:34,180 - backend.main:147 - INFO - 🪙 检测到新代币: INVEST (Shell Company)
+2025-07-18 17:46:34,182 - backend.main:148 - INFO - 🪙 代币详情: mint=49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump, 总供应量=1000000000
+2025-07-18 17:46:34,183 - backend.main:151 - INFO - 📤 [STEP 1] 准备创建代币消息: INVEST
+2025-07-18 17:46:34,184 - backend.main:158 - INFO - 📤 [STEP 2] 序列化消息: INVEST
+2025-07-18 17:46:34,184 - backend.main:160 - INFO - 📤 [STEP 3] 准备广播新代币消息: INVEST
+2025-07-18 17:46:34,185 - backend.main:161 - INFO - 📤 消息内容: {"type": "new_token", "data": {"name": "Shell Company", "symbol": "INVEST", "uri": "https://ipfs.io/ipfs/bafkreiekrhjmkugw4eq6vfxi44a4e6jbf6uy2anli3mhtxh5y5ky6hoydq", "mint": "49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump", "bonding_curve": "GX8rd72TuCC7dorEL89ownMMzMkHiwHx9QF3gkK91Qam", "user": "BhZ...
+2025-07-18 17:46:34,186 - backend.main:163 - INFO - 📤 [STEP 4] 调用manager.broadcast: INVEST
+2025-07-18 17:46:34,187 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:34,189 - backend.main:166 - INFO - 📤 [STEP 5] 广播完成: INVEST
+2025-07-18 17:46:34,190 - backend.main:174 - INFO - 📝 [STEP 6] 准备添加到分析队列: INVEST
+2025-07-18 17:46:34,192 - backend.main:176 - INFO - 📝 将代币 INVEST 添加到分析队列
+2025-07-18 17:46:34,193 - backend.services.message_queue:53 - INFO - task_data = {'token_data': {'name': 'Shell Company', 'symbol': 'INVEST', 'uri': 'https://ipfs.io/ipfs/bafkreiekrhjmkugw4eq6vfxi44a4e6jbf6uy2anli3mhtxh5y5ky6hoydq', 'mint': '49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump', 'bonding_curve': 'GX8rd72TuCC7dorEL89ownMMzMkHiwHx9QF3gkK91Qam', 'user': 'BhZavCx5pfYHMDYerP61sfvhMhwzwAGGkq42qcganXUn', 'creator': 'BhZavCx5pfYHMDYerP61sfvhMhwzwAGGkq42qcganXUn', 'timestamp': 1752832009, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:46:34'}, 'created_at': '2025-07-18 17:46:34', 'task_id': '49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump_5710a623-009f-41e7-909a-0139ad730f11'}
+2025-07-18 17:46:34,197 - backend.services.message_queue:72 - INFO - 任务已添加到Redis队列: INVEST
+2025-07-18 17:46:34,198 - backend.services.message_queue:81 - INFO - 代币分析任务已入队: INVEST (49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump)
+2025-07-18 17:46:34,199 - backend.services.ai_analyzer:130 - INFO - 开始处理分析任务: {'token_data': {'name': 'Shell Company', 'symbol': 'INVEST', 'uri': 'https://ipfs.io/ipfs/bafkreiekrhjmkugw4eq6vfxi44a4e6jbf6uy2anli3mhtxh5y5ky6hoydq', 'mint': '49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump', 'bonding_curve': 'GX8rd72TuCC7dorEL89ownMMzMkHiwHx9QF3gkK91Qam', 'user': 'BhZavCx5pfYHMDYerP61sfvhMhwzwAGGkq42qcganXUn', 'creator': 'BhZavCx5pfYHMDYerP61sfvhMhwzwAGGkq42qcganXUn', 'timestamp': 1752832009, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:46:34'}, 'created_at': '2025-07-18 17:46:34', 'task_id': '49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump_5710a623-009f-41e7-909a-0139ad730f11'}
+2025-07-18 17:46:34,202 - backend.services.ai_analyzer:138 - INFO - 开始分析代币: INVEST
+2025-07-18 17:46:34,204 - backend.services.message_queue:152 - INFO - 分析进度更新: INVEST - 10.0%
+2025-07-18 17:46:34,205 - backend.services.ai_analyzer:255 - INFO - 🔍 使用高效Google搜索引擎搜索: INVEST
+2025-07-18 17:46:34,207 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $INVEST[49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump] cryptocurrency (需要6个结果)
+2025-07-18 17:46:34,208 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:34,209 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump", "token_symbol": "INVEST", "token_name": "Shell Company", "status": "ANALYZING", "progress": 10.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:34.202866"}
+2025-07-18 17:46:35,479 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $INVEST[49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump] cryptocurrency (获得6个结果)
+2025-07-18 17:46:35,483 - backend.services.ai_analyzer:267 - INFO - ✅ Google搜索获得 6 个结果
+2025-07-18 17:46:35,484 - backend.services.ai_analyzer:290 - INFO - 🔍 总共获得 6 个搜索结果
+2025-07-18 17:46:35,487 - backend.services.message_queue:152 - INFO - 分析进度更新: INVEST - 30.0%
+2025-07-18 17:46:35,488 - backend.services.ai_analyzer:232 - INFO - use tweet search for $INVEST(49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump)
+2025-07-18 17:46:35,490 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:35,491 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump", "token_symbol": "INVEST", "token_name": "Shell Company", "status": "ANALYZING", "progress": 30.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:35.486454"}
+2025-07-18 17:46:39,569 - backend.services.ai_analyzer:244 - ERROR - 推特搜索引擎失败
+2025-07-18 17:46:39,570 - backend.services.message_queue:152 - INFO - 分析进度更新: INVEST - 50.0%
+2025-07-18 17:46:39,571 - backend.services.ai_analyzer:82 - INFO - 🤖 开始AI请求 (活跃: 1/1, 总计: 4)
+2025-07-18 17:46:39,572 - backend.services.ai_analyzer:350 - INFO - enter _do_ai_analyze_simple result = [WebSearchResult(title='Investing in cryptocurrency - Investopedia', url='https://www.investopedia.com/cryptocurrency-4427699', snippet=' A cryptocurrency exchange traded fund is an ETF that tracks a single cryptocurrency or a basket of different digital currencies. ', relevance_score=95.0), WebSearchResult(title='Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust', url='https://www.coinbase.com/', snippet=' Coinbase is a secure online platform for buying, selling, transferring, and storing cryptocurrency. ', relevance_score=92.0), WebSearchResult(title='Cryptocurrency Prices - Real Time Market Data - Investing.com', url='https://www.investing.com/crypto', snippet=' Live Cryptocurrency data dashboard. Overview market capitalization, charts, prices, trades and volumes. Create real-time notifications and alerts. ', relevance_score=89.0), WebSearchResult(title='Cryptocurrency - Singapore - POEMS', url='https://www.poems.com.sg/glossary/investment/cryptocurrency/', snippet=' Cryptocurrency assets are often volatile, meaning their prices can fluctuate dramatically. This volatility can make cryptocurrencies a risky investment. However\xa0... ', relevance_score=86.0), WebSearchResult(title='Crypto Partner Hub - SoFi', url='https://www.sofi.com/invest/buy-cryptocurrency/', snippet=" We've partnered up with two of the leading digital asset platforms to give you access to a wide range of cryptocurrencies and advanced crypto trading features. ", relevance_score=83.0), WebSearchResult(title='  investing in cryptocurrency for beginners  ', url='/search?num=8', snippet=' investing in cryptocurrency for beginners ', relevance_score=80.0)]
+2025-07-18 17:46:39,574 - backend.services.ai_analyzer:360 - INFO - tweet_context = 
+2025-07-18 17:46:39,574 - backend.services.ai_analyzer:392 - INFO - gemini simple analyze prompt 
+            分析以下加密货币代币的叙事背景：
+            
+            - 代币名称: Shell Company
+            - 代币符号: INVEST
+            - 总供应量: 1,000,000,000
+            - 虚拟代币储备: 1,073,000,000
+            - 虚拟SOL储备: 30
+            - 实际代币储备: 793,100,000
+            
+            网络搜索结果:
+            标题: Investing in cryptocurrency - Investopedia
+摘要:  A cryptocurrency exchange traded fund is an ETF that tracks a single cryptocurrency or a basket of different digital currencies. 
+链接: https://www.investopedia.com/cryptocurrency-4427699
+标题: Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust
+摘要:  Coinbase is a secure online platform for buying, selling, transferring, and storing cryptocurrency. 
+链接: https://www.coinbase.com/
+标题: Cryptocurrency Prices - Real Time Market Data - Investing.com
+摘要:  Live Cryptocurrency data dashboard. Overview market capitalization, charts, prices, trades and volumes. Create real-time notifications and alerts. 
+链接: https://www.investing.com/crypto
+标题: Cryptocurrency - Singapore - POEMS
+摘要:  Cryptocurrency assets are often volatile, meaning their prices can fluctuate dramatically. This volatility can make cryptocurrencies a risky investment. However ... 
+链接: https://www.poems.com.sg/glossary/investment/cryptocurrency/
+标题: Crypto Partner Hub - SoFi
+摘要:  We've partnered up with two of the leading digital asset platforms to give you access to a wide range of cryptocurrencies and advanced crypto trading features. 
+链接: https://www.sofi.com/invest/buy-cryptocurrency/
+            
+            推文结果:
+            
+            
+            请分析：
+                1. 项目的核心叙事和概念
+                2. 风险评分: 0-100 (100为最高风险)
+                3. 价格预测
+                4. 简洁但全面的总结
+                5. 投资建议
+            请以JSON格式返回：
+            {
+                "narrative_analysis": "叙事分析",
+                "risk_assessment": "风险评估",
+                "market_analysis": "市场分析",
+                "ai_summary": "AI总结",
+                "investment_recommendation": "投资建议"
+            }
+            
+2025-07-18 17:46:39,577 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:39,578 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump", "token_symbol": "INVEST", "token_name": "Shell Company", "status": "ANALYZING", "progress": 50.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:39.569210"}
+2025-07-18 17:46:39,864 - backend.services.ai_analyzer:401 - ERROR - Gemini API调用失败: 400 User location is not supported for the API use.
+2025-07-18 17:46:39,865 - backend.services.ai_analyzer:98 - ERROR - ❌ AI请求失败: 400 User location is not supported for the API use. (完成: 0, 失败: 4)
+2025-07-18 17:46:39,865 - backend.services.ai_analyzer:413 - ERROR - _ai_analyze_simple error 400 User location is not supported for the API use.
+2025-07-18 17:46:39,867 - backend.services.message_queue:180 - INFO - 分析完成: INVEST
+2025-07-18 17:46:39,867 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:39,868 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_complete", "data": {"token_mint": "49WAi98J9u5BkvDhTnN3Wt3Coy89udQyetMCBy78pump", "token_symbol": "INVEST", "token_name": "Shell Company", "status": "COMPLETED", "progress": 100.0, "narrative_analysis": "\u53d9\u4e8b\u5206\u6790\u5931\u8d25", "risk_assessment": "\u98ce\u9669\u8bc4\u4f30\u5931\u8d25", "market_analysis": "\u5e02\u573a\u5206\u6790\u5931\u8d25", "web_search_results": [{"title": "Investing in cryptocurrency - Investopedia", "url": "https://www.investopedia.com/cryptocurrency-4427699", "snippet": " A cryptocurrency exchange traded fund is an ETF that tracks a single cryptocurrency or a basket of different digital currencies. ", "relevance_score": 95.0}, {"title": "Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust", "url": "https://www.coinbase.com/", "snippet": " Coinbase is a secure online platform for buying, selling, transferring, and storing cryptocurrency. ", "relevance_score": 92.0}, {"title": "Cryptocurrency Prices - Real Time Market Data - Investing.com", "url": "https://www.investing.com/crypto", "snippet": " Live Cryptocurrency data dashboard. Overview market capitalization, charts, prices, trades and volumes. Create real-time notifications and alerts. ", "relevance_score": 89.0}, {"title": "Cryptocurrency - Singapore - POEMS", "url": "https://www.poems.com.sg/glossary/investment/cryptocurrency/", "snippet": " Cryptocurrency assets are often volatile, meaning their prices can fluctuate dramatically. This volatility can make cryptocurrencies a risky investment. However\u00a0... ", "relevance_score": 86.0}, {"title": "Crypto Partner Hub - SoFi", "url": "https://www.sofi.com/invest/buy-cryptocurrency/", "snippet": " We've partnered up with two of the leading digital asset platforms to give you access to a wide range of cryptocurrencies and advanced crypto trading features. ", "relevance_score": 83.0}, {"title": "  investing in cryptocurrency for beginners  ", "url": "/search?num=8", "snippet": " investing in cryptocurrency for beginners ", "relevance_score": 80.0}], "tweet_result": [], "ai_summary": "AI\u603b\u7ed3\u5931\u8d25", "investment_recommendation": "\u6295\u8d44\u5efa\u8bae\u5931\u8d25", "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": "2025-07-18T17:46:39.866054", "error_message": null}, "timestamp": "2025-07-18T17:46:39.866054"}
+2025-07-18 17:46:51,208 - backend.services.token_monitor:124 - INFO - 🪙 准备调用回调函数处理代币: 0.000001
+2025-07-18 17:46:51,209 - backend.services.token_monitor:134 - INFO - 🪙 异步任务已提交: 0.000001
+2025-07-18 17:46:51,209 - backend.main:144 - INFO - 🪙 [START] handle_new_token 开始处理: 0.000001
+2025-07-18 17:46:51,210 - backend.main:147 - INFO - 🪙 检测到新代币: 0.000001 (Chicken Wing Cat)
+2025-07-18 17:46:51,211 - backend.main:148 - INFO - 🪙 代币详情: mint=48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump, 总供应量=1000000000
+2025-07-18 17:46:51,214 - backend.main:151 - INFO - 📤 [STEP 1] 准备创建代币消息: 0.000001
+2025-07-18 17:46:51,214 - backend.main:158 - INFO - 📤 [STEP 2] 序列化消息: 0.000001
+2025-07-18 17:46:51,215 - backend.main:160 - INFO - 📤 [STEP 3] 准备广播新代币消息: 0.000001
+2025-07-18 17:46:51,215 - backend.main:161 - INFO - 📤 消息内容: {"type": "new_token", "data": {"name": "Chicken Wing Cat", "symbol": "0.000001", "uri": "https://ipfs.io/ipfs/QmeaQNSy7kVUbVRs1R4RwZ2cqhBRHUeRBkCc97F7fe2ZZE", "mint": "48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump", "bonding_curve": "94D7p4MRXzMevkzDDQeFA6Yqdwvz8VwW95iovECE4M1f", "user": "8eFmKByFmJv...
+2025-07-18 17:46:51,216 - backend.main:163 - INFO - 📤 [STEP 4] 调用manager.broadcast: 0.000001
+2025-07-18 17:46:51,216 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:51,217 - backend.main:166 - INFO - 📤 [STEP 5] 广播完成: 0.000001
+2025-07-18 17:46:51,217 - backend.main:174 - INFO - 📝 [STEP 6] 准备添加到分析队列: 0.000001
+2025-07-18 17:46:51,218 - backend.main:176 - INFO - 📝 将代币 0.000001 添加到分析队列
+2025-07-18 17:46:51,218 - backend.services.message_queue:53 - INFO - task_data = {'token_data': {'name': 'Chicken Wing Cat', 'symbol': '0.000001', 'uri': 'https://ipfs.io/ipfs/QmeaQNSy7kVUbVRs1R4RwZ2cqhBRHUeRBkCc97F7fe2ZZE', 'mint': '48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump', 'bonding_curve': '94D7p4MRXzMevkzDDQeFA6Yqdwvz8VwW95iovECE4M1f', 'user': '8eFmKByFmJvbEqQfd51UjFLUmDcyAhrjmNXy1RsnZHWQ', 'creator': '8eFmKByFmJvbEqQfd51UjFLUmDcyAhrjmNXy1RsnZHWQ', 'timestamp': 1752832026, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:46:51'}, 'created_at': '2025-07-18 17:46:51', 'task_id': '48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump_fe0c14ab-e85f-434d-afb0-f3f0698d2ea3'}
+2025-07-18 17:46:51,221 - backend.services.ai_analyzer:130 - INFO - 开始处理分析任务: {'token_data': {'name': 'Chicken Wing Cat', 'symbol': '0.000001', 'uri': 'https://ipfs.io/ipfs/QmeaQNSy7kVUbVRs1R4RwZ2cqhBRHUeRBkCc97F7fe2ZZE', 'mint': '48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump', 'bonding_curve': '94D7p4MRXzMevkzDDQeFA6Yqdwvz8VwW95iovECE4M1f', 'user': '8eFmKByFmJvbEqQfd51UjFLUmDcyAhrjmNXy1RsnZHWQ', 'creator': '8eFmKByFmJvbEqQfd51UjFLUmDcyAhrjmNXy1RsnZHWQ', 'timestamp': 1752832026, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:46:51'}, 'created_at': '2025-07-18 17:46:51', 'task_id': '48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump_fe0c14ab-e85f-434d-afb0-f3f0698d2ea3'}
+2025-07-18 17:46:51,222 - backend.services.ai_analyzer:138 - INFO - 开始分析代币: 0.000001
+2025-07-18 17:46:51,223 - backend.services.message_queue:72 - INFO - 任务已添加到Redis队列: 0.000001
+2025-07-18 17:46:51,224 - backend.services.message_queue:81 - INFO - 代币分析任务已入队: 0.000001 (48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump)
+2025-07-18 17:46:51,225 - backend.services.message_queue:152 - INFO - 分析进度更新: 0.000001 - 10.0%
+2025-07-18 17:46:51,226 - backend.services.ai_analyzer:255 - INFO - 🔍 使用高效Google搜索引擎搜索: 0.000001
+2025-07-18 17:46:51,226 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $0.000001[48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump] cryptocurrency (需要6个结果)
+2025-07-18 17:46:51,227 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:51,228 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump", "token_symbol": "0.000001", "token_name": "Chicken Wing Cat", "status": "ANALYZING", "progress": 10.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:51.223558"}
+2025-07-18 17:46:51,946 - backend.google_engine:169 - WARNING - 查询 '$0.000001[48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump] cryptocurrency' 只找到 0 个结果，需要 6 个结果
+2025-07-18 17:46:51,947 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $0.000001[48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump] cryptocurrency (获得0个结果)
+2025-07-18 17:46:51,949 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $0.000001[48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump] token pump.fun (需要6个结果)
+2025-07-18 17:46:53,051 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $0.000001[48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump] token pump.fun (获得6个结果)
+2025-07-18 17:46:53,054 - backend.services.ai_analyzer:267 - INFO - ✅ Google搜索获得 6 个结果
+2025-07-18 17:46:53,055 - backend.services.ai_analyzer:290 - INFO - 🔍 总共获得 6 个搜索结果
+2025-07-18 17:46:53,056 - backend.services.message_queue:152 - INFO - 分析进度更新: 0.000001 - 30.0%
+2025-07-18 17:46:53,056 - backend.services.ai_analyzer:232 - INFO - use tweet search for $0.000001(48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump)
+2025-07-18 17:46:53,057 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:53,057 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump", "token_symbol": "0.000001", "token_name": "Chicken Wing Cat", "status": "ANALYZING", "progress": 30.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:53.055029"}
+2025-07-18 17:46:57,150 - backend.services.ai_analyzer:244 - ERROR - 推特搜索引擎失败
+2025-07-18 17:46:57,151 - backend.services.message_queue:152 - INFO - 分析进度更新: 0.000001 - 50.0%
+2025-07-18 17:46:57,151 - backend.services.ai_analyzer:82 - INFO - 🤖 开始AI请求 (活跃: 1/1, 总计: 5)
+2025-07-18 17:46:57,152 - backend.services.ai_analyzer:350 - INFO - enter _do_ai_analyze_simple result = [WebSearchResult(title='Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today', url='https://www.coingecko.com/en/coins/pump-fun', snippet=" Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular\xa0... ", relevance_score=95.0), WebSearchResult(title='Pump Fun', url='https://pump.fun/board', snippet=' Pump Culture     Airdrop Mania     Absurd Humor     Pet Frenzy     Just Tokens     Crypto Personalities🕶   Biz Grandpa     Weird Waifus    ✨ Mock Utility     ', relevance_score=92.0), WebSearchResult(title='Pump.fun Token Tops $2 Billion in Market Cap Following ... - Decrypt', url='https://decrypt.co/330222/pump-fun-token-600m-ico-bonk', snippet=" 3 days ago  ·  Pump.fun's token debuted at a $1.97 billion market cap, making it the 63rd largest cryptocurrency by market cap. ", relevance_score=89.0), WebSearchResult(title='Pump.fun Price, PUMP Price, Live Charts, and Marketcap - Coinbase', url='https://www.coinbase.com/price/pump-fun-solana', snippet=" 3 hours ago  ·  The market cap is $2.25B, calculated by multiplying Pump.fun's current price of $0.01 by its total supply of 1,000,000,000,000 PUMP. Pump.fun's\xa0... ", relevance_score=86.0), WebSearchResult(title='Pump.fun price today, PUMP to USD live price, marketcap and chart', url='https://coinmarketcap.com/currencies/pump-fun/', snippet=' The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1,183,414,216 USD. We update our PUMP to USD price in real-time. ', relevance_score=83.0), WebSearchResult(title='My Token (TOKEN) - Pump Fun', url='https://pump.fun/coin/HLm8e6km6vK2SUz9qXUycgmmri7AXGx2m8zHiXQwyBnY', snippet=' pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ', relevance_score=80.0)]
+2025-07-18 17:46:57,152 - backend.services.ai_analyzer:360 - INFO - tweet_context = 
+2025-07-18 17:46:57,153 - backend.services.ai_analyzer:392 - INFO - gemini simple analyze prompt 
+            分析以下加密货币代币的叙事背景：
+            
+            - 代币名称: Chicken Wing Cat
+            - 代币符号: 0.000001
+            - 总供应量: 1,000,000,000
+            - 虚拟代币储备: 1,073,000,000
+            - 虚拟SOL储备: 30
+            - 实际代币储备: 793,100,000
+            
+            网络搜索结果:
+            标题: Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today
+摘要:  Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular ... 
+链接: https://www.coingecko.com/en/coins/pump-fun
+标题: Pump Fun
+摘要:  Pump Culture     Airdrop Mania     Absurd Humor     Pet Frenzy     Just Tokens     Crypto Personalities🕶   Biz Grandpa     Weird Waifus    ✨ Mock Utility     
+链接: https://pump.fun/board
+标题: Pump.fun Token Tops $2 Billion in Market Cap Following ... - Decrypt
+摘要:  3 days ago  ·  Pump.fun's token debuted at a $1.97 billion market cap, making it the 63rd largest cryptocurrency by market cap. 
+链接: https://decrypt.co/330222/pump-fun-token-600m-ico-bonk
+标题: Pump.fun Price, PUMP Price, Live Charts, and Marketcap - Coinbase
+摘要:  3 hours ago  ·  The market cap is $2.25B, calculated by multiplying Pump.fun's current price of $0.01 by its total supply of 1,000,000,000,000 PUMP. Pump.fun's ... 
+链接: https://www.coinbase.com/price/pump-fun-solana
+标题: Pump.fun price today, PUMP to USD live price, marketcap and chart
+摘要:  The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1,183,414,216 USD. We update our PUMP to USD price in real-time. 
+链接: https://coinmarketcap.com/currencies/pump-fun/
+            
+            推文结果:
+            
+            
+            请分析：
+                1. 项目的核心叙事和概念
+                2. 风险评分: 0-100 (100为最高风险)
+                3. 价格预测
+                4. 简洁但全面的总结
+                5. 投资建议
+            请以JSON格式返回：
+            {
+                "narrative_analysis": "叙事分析",
+                "risk_assessment": "风险评估",
+                "market_analysis": "市场分析",
+                "ai_summary": "AI总结",
+                "investment_recommendation": "投资建议"
+            }
+            
+2025-07-18 17:46:57,155 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:57,156 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump", "token_symbol": "0.000001", "token_name": "Chicken Wing Cat", "status": "ANALYZING", "progress": 50.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:46:57.150083"}
+2025-07-18 17:46:57,424 - backend.services.ai_analyzer:401 - ERROR - Gemini API调用失败: 400 User location is not supported for the API use.
+2025-07-18 17:46:57,424 - backend.services.ai_analyzer:98 - ERROR - ❌ AI请求失败: 400 User location is not supported for the API use. (完成: 0, 失败: 5)
+2025-07-18 17:46:57,425 - backend.services.ai_analyzer:413 - ERROR - _ai_analyze_simple error 400 User location is not supported for the API use.
+2025-07-18 17:46:57,426 - backend.services.message_queue:180 - INFO - 分析完成: 0.000001
+2025-07-18 17:46:57,426 - backend.main:68 - WARNING - ⚠️ 没有活跃的WebSocket连接，跳过广播
+2025-07-18 17:46:57,427 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_complete", "data": {"token_mint": "48pR3vtsEwKbGbkgK4kKyrhd9cnKMbyUQJST2wS1pump", "token_symbol": "0.000001", "token_name": "Chicken Wing Cat", "status": "COMPLETED", "progress": 100.0, "narrative_analysis": "\u53d9\u4e8b\u5206\u6790\u5931\u8d25", "risk_assessment": "\u98ce\u9669\u8bc4\u4f30\u5931\u8d25", "market_analysis": "\u5e02\u573a\u5206\u6790\u5931\u8d25", "web_search_results": [{"title": "Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today", "url": "https://www.coingecko.com/en/coins/pump-fun", "snippet": " Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular\u00a0... ", "relevance_score": 95.0}, {"title": "Pump Fun", "url": "https://pump.fun/board", "snippet": " Pump Culture     Airdrop Mania     Absurd Humor     Pet Frenzy     Just Tokens     Crypto Personalities\ud83d\udd76   Biz Grandpa     Weird Waifus    \u2728 Mock Utility     ", "relevance_score": 92.0}, {"title": "Pump.fun Token Tops $2 Billion in Market Cap Following ... - Decrypt", "url": "https://decrypt.co/330222/pump-fun-token-600m-ico-bonk", "snippet": " 3 days ago  \u00b7  Pump.fun's token debuted at a $1.97 billion market cap, making it the 63rd largest cryptocurrency by market cap. ", "relevance_score": 89.0}, {"title": "Pump.fun Price, PUMP Price, Live Charts, and Marketcap - Coinbase", "url": "https://www.coinbase.com/price/pump-fun-solana", "snippet": " 3 hours ago  \u00b7  The market cap is $2.25B, calculated by multiplying Pump.fun's current price of $0.01 by its total supply of 1,000,000,000,000 PUMP. Pump.fun's\u00a0... ", "relevance_score": 86.0}, {"title": "Pump.fun price today, PUMP to USD live price, marketcap and chart", "url": "https://coinmarketcap.com/currencies/pump-fun/", "snippet": " The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1,183,414,216 USD. We update our PUMP to USD price in real-time. ", "relevance_score": 83.0}, {"title": "My Token (TOKEN) - Pump Fun", "url": "https://pump.fun/coin/HLm8e6km6vK2SUz9qXUycgmmri7AXGx2m8zHiXQwyBnY", "snippet": " pump allows anyone to create coins. all coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ", "relevance_score": 80.0}], "tweet_result": [], "ai_summary": "AI\u603b\u7ed3\u5931\u8d25", "investment_recommendation": "\u6295\u8d44\u5efa\u8bae\u5931\u8d25", "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": "2025-07-18T17:46:57.425869", "error_message": null}, "timestamp": "2025-07-18T17:46:57.425869"}
+2025-07-18 17:47:07,936 - backend.main:230 - INFO - 🔗 新的WebSocket连接请求来自: 127.0.0.1
+2025-07-18 17:47:07,937 - backend.main:50 - INFO - WebSocket连接已建立，当前连接数: 1
+2025-07-18 17:47:07,940 - backend.main:242 - INFO - 📤 发送连接确认消息到 127.0.0.1: {"type": "connection_status", "data": {"status": "connected"}, "timestamp": "2025-07-18T17:47:07.937681"}
+2025-07-18 17:47:37,957 - backend.main:272 - INFO - 💓 发送心跳到 127.0.0.1: {"type": "heartbeat", "timestamp": "2025-07-18T17:47:37.957450"}
+2025-07-18 17:47:37,958 - backend.main:248 - INFO - 📥 收到来自 127.0.0.1 的消息: heartbeat
+2025-07-18 17:47:37,959 - backend.main:260 - INFO - 📤 发送心跳响应到 127.0.0.1: {"type": "heartbeat_response", "timestamp": "2025-07-18T17:47:37.958444"}
+2025-07-18 17:47:38,423 - backend.main:248 - INFO - 📥 收到来自 127.0.0.1 的消息: heartbeat
+2025-07-18 17:47:38,423 - backend.main:260 - INFO - 📤 发送心跳响应到 127.0.0.1: {"type": "heartbeat_response", "timestamp": "2025-07-18T17:47:38.423660"}
+2025-07-18 17:48:08,431 - backend.main:272 - INFO - 💓 发送心跳到 127.0.0.1: {"type": "heartbeat", "timestamp": "2025-07-18T17:48:08.431999"}
+2025-07-18 17:48:08,437 - backend.main:248 - INFO - 📥 收到来自 127.0.0.1 的消息: heartbeat
+2025-07-18 17:48:08,437 - backend.main:260 - INFO - 📤 发送心跳响应到 127.0.0.1: {"type": "heartbeat_response", "timestamp": "2025-07-18T17:48:08.437723"}
+2025-07-18 17:48:08,438 - backend.main:248 - INFO - 📥 收到来自 127.0.0.1 的消息: heartbeat
+2025-07-18 17:48:08,439 - backend.main:260 - INFO - 📤 发送心跳响应到 127.0.0.1: {"type": "heartbeat_response", "timestamp": "2025-07-18T17:48:08.439233"}
+2025-07-18 17:48:11,711 - backend.services.token_monitor:124 - INFO - 🪙 准备调用回调函数处理代币: W3AILR
+2025-07-18 17:48:11,712 - backend.services.token_monitor:134 - INFO - 🪙 异步任务已提交: W3AILR
+2025-07-18 17:48:11,712 - backend.main:144 - INFO - 🪙 [START] handle_new_token 开始处理: W3AILR
+2025-07-18 17:48:11,713 - backend.main:147 - INFO - 🪙 检测到新代币: W3AILR (Web3 AI/ML)
+2025-07-18 17:48:11,714 - backend.main:148 - INFO - 🪙 代币详情: mint=AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump, 总供应量=1000000000
+2025-07-18 17:48:11,715 - backend.main:151 - INFO - 📤 [STEP 1] 准备创建代币消息: W3AILR
+2025-07-18 17:48:11,715 - backend.main:158 - INFO - 📤 [STEP 2] 序列化消息: W3AILR
+2025-07-18 17:48:11,716 - backend.main:160 - INFO - 📤 [STEP 3] 准备广播新代币消息: W3AILR
+2025-07-18 17:48:11,716 - backend.main:161 - INFO - 📤 消息内容: {"type": "new_token", "data": {"name": "Web3 AI/ML", "symbol": "W3AILR", "uri": "https://ipfs.io/ipfs/bafkreicsk3sr2buo3222hbozkabjzhynfaijgkpd6fstkllgzykusavj6e", "mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "bonding_curve": "DKZ2cxpB4PYRjQcWNwQsQV7TNeiJUnH8SdyWaGsFi7VK", "user": "2rexxK...
+2025-07-18 17:48:11,716 - backend.main:163 - INFO - 📤 [STEP 4] 调用manager.broadcast: W3AILR
+2025-07-18 17:48:11,716 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:11,717 - backend.main:72 - INFO - 📡 广播内容: {"type": "new_token", "data": {"name": "Web3 AI/ML", "symbol": "W3AILR", "uri": "https://ipfs.io/ipfs/bafkreicsk3sr2buo3222hbozkabjzhynfaijgkpd6fstkllgzykusavj6e", "mint": "AkeS6QnJWfGt8emWMQ4LE9renCm...
+2025-07-18 17:48:11,717 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:11,718 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:11,719 - backend.main:166 - INFO - 📤 [STEP 5] 广播完成: W3AILR
+2025-07-18 17:48:11,719 - backend.main:174 - INFO - 📝 [STEP 6] 准备添加到分析队列: W3AILR
+2025-07-18 17:48:11,719 - backend.main:176 - INFO - 📝 将代币 W3AILR 添加到分析队列
+2025-07-18 17:48:11,719 - backend.services.message_queue:53 - INFO - task_data = {'token_data': {'name': 'Web3 AI/ML', 'symbol': 'W3AILR', 'uri': 'https://ipfs.io/ipfs/bafkreicsk3sr2buo3222hbozkabjzhynfaijgkpd6fstkllgzykusavj6e', 'mint': 'AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump', 'bonding_curve': 'DKZ2cxpB4PYRjQcWNwQsQV7TNeiJUnH8SdyWaGsFi7VK', 'user': '2rexxKH4jCJUBvkSFxHm7ZLVmc9oNjaCQvFp3fd2TamR', 'creator': '2rexxKH4jCJUBvkSFxHm7ZLVmc9oNjaCQvFp3fd2TamR', 'timestamp': 1752832106, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:48:11'}, 'created_at': '2025-07-18 17:48:11', 'task_id': 'AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump_d65307bd-c272-4644-b55f-2dbdf7fcfa62'}
+2025-07-18 17:48:11,720 - backend.services.ai_analyzer:130 - INFO - 开始处理分析任务: {'token_data': {'name': 'Web3 AI/ML', 'symbol': 'W3AILR', 'uri': 'https://ipfs.io/ipfs/bafkreicsk3sr2buo3222hbozkabjzhynfaijgkpd6fstkllgzykusavj6e', 'mint': 'AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump', 'bonding_curve': 'DKZ2cxpB4PYRjQcWNwQsQV7TNeiJUnH8SdyWaGsFi7VK', 'user': '2rexxKH4jCJUBvkSFxHm7ZLVmc9oNjaCQvFp3fd2TamR', 'creator': '2rexxKH4jCJUBvkSFxHm7ZLVmc9oNjaCQvFp3fd2TamR', 'timestamp': 1752832106, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:48:11'}, 'created_at': '2025-07-18 17:48:11', 'task_id': 'AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump_d65307bd-c272-4644-b55f-2dbdf7fcfa62'}
+2025-07-18 17:48:11,721 - backend.services.ai_analyzer:138 - INFO - 开始分析代币: W3AILR
+2025-07-18 17:48:11,722 - backend.services.message_queue:72 - INFO - 任务已添加到Redis队列: W3AILR
+2025-07-18 17:48:11,722 - backend.services.message_queue:81 - INFO - 代币分析任务已入队: W3AILR (AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump)
+2025-07-18 17:48:11,723 - backend.services.message_queue:152 - INFO - 分析进度更新: W3AILR - 10.0%
+2025-07-18 17:48:11,723 - backend.services.ai_analyzer:255 - INFO - 🔍 使用高效Google搜索引擎搜索: W3AILR
+2025-07-18 17:48:11,724 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $W3AILR[AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump] cryptocurrency (需要6个结果)
+2025-07-18 17:48:11,724 - backend.main:72 - INFO - 📡 广播内容: {"type": "analysis_update", "data": {"token_mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "token_symbol": "W3AILR", "token_name": "Web3 AI/ML", "status": "ANALYZING", "progress": 10.0, "narra...
+2025-07-18 17:48:11,725 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:11,727 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:11,728 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "token_symbol": "W3AILR", "token_name": "Web3 AI/ML", "status": "ANALYZING", "progress": 10.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:48:11.722163"}
+2025-07-18 17:48:13,237 - backend.google_engine:169 - WARNING - 查询 '$W3AILR[AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump] cryptocurrency' 只找到 1 个结果，需要 6 个结果
+2025-07-18 17:48:13,237 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $W3AILR[AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump] cryptocurrency (获得1个结果)
+2025-07-18 17:48:13,239 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $W3AILR[AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump] token pump.fun (需要6个结果)
+2025-07-18 17:48:14,349 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $W3AILR[AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump] token pump.fun (获得6个结果)
+2025-07-18 17:48:14,350 - backend.services.ai_analyzer:267 - INFO - ✅ Google搜索获得 6 个结果
+2025-07-18 17:48:14,351 - backend.services.ai_analyzer:290 - INFO - 🔍 总共获得 6 个搜索结果
+2025-07-18 17:48:14,352 - backend.services.message_queue:152 - INFO - 分析进度更新: W3AILR - 30.0%
+2025-07-18 17:48:14,352 - backend.services.ai_analyzer:232 - INFO - use tweet search for $W3AILR(AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump)
+2025-07-18 17:48:14,353 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:14,355 - backend.main:72 - INFO - 📡 广播内容: {"type": "analysis_update", "data": {"token_mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "token_symbol": "W3AILR", "token_name": "Web3 AI/ML", "status": "ANALYZING", "progress": 30.0, "narra...
+2025-07-18 17:48:14,356 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:14,356 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:14,356 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "token_symbol": "W3AILR", "token_name": "Web3 AI/ML", "status": "ANALYZING", "progress": 30.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:48:14.351672"}
+2025-07-18 17:48:18,442 - backend.services.ai_analyzer:244 - ERROR - 推特搜索引擎失败
+2025-07-18 17:48:18,443 - backend.services.message_queue:152 - INFO - 分析进度更新: W3AILR - 50.0%
+2025-07-18 17:48:18,444 - backend.services.ai_analyzer:82 - INFO - 🤖 开始AI请求 (活跃: 1/1, 总计: 6)
+2025-07-18 17:48:18,444 - backend.services.ai_analyzer:350 - INFO - enter _do_ai_analyze_simple result = [WebSearchResult(title='Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust', url='https://www.coinbase.com/', snippet=' Coinbase is a secure online platform for buying, selling, transferring, and storing cryptocurrency. ', relevance_score=95.0), WebSearchResult(title='Pump Fun', url='https://pump.fun/board', snippet=' Pump Culture     Airdrop Mania     Absurd Humor     Pet Frenzy     Just Tokens     Crypto Personalities🕶   Biz Grandpa     Weird Waifus    ✨ Mock Utility     ', relevance_score=92.0), WebSearchResult(title='Pump.fun price today, PUMP to USD live price, marketcap and chart', url='https://coinmarketcap.com/currencies/pump-fun/', snippet=' The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1183414215.79 USD. We update our PUMP to USD price in real-time. ', relevance_score=89.0), WebSearchResult(title='Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today', url='https://www.coingecko.com/en/coins/pump-fun', snippet=" Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular\xa0... ", relevance_score=86.0), WebSearchResult(title='create new coin - Pump Fun', url='https://pump.fun/create', snippet=' Pump allows anyone to create coins. All coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ', relevance_score=83.0), WebSearchResult(title='Memecoin platform Pump.fun pursues US$1 billion token sale', url='https://www.businesstimes.com.sg/companies-markets/banking-finance/memecoin-platform-pump-fun-pursues-us1-billion-token-sale', snippet=' 4 Jun 2025  ·  Pump.fun, which has been compared to the edgy 4chan social media network, allows users to quickly create, promote and sell memecoins, a type of\xa0... ', relevance_score=80.0)]
+2025-07-18 17:48:18,446 - backend.services.ai_analyzer:360 - INFO - tweet_context = 
+2025-07-18 17:48:18,446 - backend.services.ai_analyzer:392 - INFO - gemini simple analyze prompt 
+            分析以下加密货币代币的叙事背景：
+            
+            - 代币名称: Web3 AI/ML
+            - 代币符号: W3AILR
+            - 总供应量: 1,000,000,000
+            - 虚拟代币储备: 1,073,000,000
+            - 虚拟SOL储备: 30
+            - 实际代币储备: 793,100,000
+            
+            网络搜索结果:
+            标题: Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust
+摘要:  Coinbase is a secure online platform for buying, selling, transferring, and storing cryptocurrency. 
+链接: https://www.coinbase.com/
+标题: Pump Fun
+摘要:  Pump Culture     Airdrop Mania     Absurd Humor     Pet Frenzy     Just Tokens     Crypto Personalities🕶   Biz Grandpa     Weird Waifus    ✨ Mock Utility     
+链接: https://pump.fun/board
+标题: Pump.fun price today, PUMP to USD live price, marketcap and chart
+摘要:  The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1183414215.79 USD. We update our PUMP to USD price in real-time. 
+链接: https://coinmarketcap.com/currencies/pump-fun/
+标题: Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today
+摘要:  Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular ... 
+链接: https://www.coingecko.com/en/coins/pump-fun
+标题: create new coin - Pump Fun
+摘要:  Pump allows anyone to create coins. All coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. 
+链接: https://pump.fun/create
+            
+            推文结果:
+            
+            
+            请分析：
+                1. 项目的核心叙事和概念
+                2. 风险评分: 0-100 (100为最高风险)
+                3. 价格预测
+                4. 简洁但全面的总结
+                5. 投资建议
+            请以JSON格式返回：
+            {
+                "narrative_analysis": "叙事分析",
+                "risk_assessment": "风险评估",
+                "market_analysis": "市场分析",
+                "ai_summary": "AI总结",
+                "investment_recommendation": "投资建议"
+            }
+            
+2025-07-18 17:48:18,448 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:18,448 - backend.main:72 - INFO - 📡 广播内容: {"type": "analysis_update", "data": {"token_mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "token_symbol": "W3AILR", "token_name": "Web3 AI/ML", "status": "ANALYZING", "progress": 50.0, "narra...
+2025-07-18 17:48:18,450 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:18,450 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:18,450 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "token_symbol": "W3AILR", "token_name": "Web3 AI/ML", "status": "ANALYZING", "progress": 50.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:48:18.443696"}
+2025-07-18 17:48:18,725 - backend.services.ai_analyzer:401 - ERROR - Gemini API调用失败: 400 User location is not supported for the API use.
+2025-07-18 17:48:18,725 - backend.services.ai_analyzer:98 - ERROR - ❌ AI请求失败: 400 User location is not supported for the API use. (完成: 0, 失败: 6)
+2025-07-18 17:48:18,726 - backend.services.ai_analyzer:413 - ERROR - _ai_analyze_simple error 400 User location is not supported for the API use.
+2025-07-18 17:48:18,726 - backend.services.message_queue:180 - INFO - 分析完成: W3AILR
+2025-07-18 17:48:18,727 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:18,727 - backend.main:72 - INFO - 📡 广播内容: {"type": "analysis_complete", "data": {"token_mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "token_symbol": "W3AILR", "token_name": "Web3 AI/ML", "status": "COMPLETED", "progress": 100.0, "na...
+2025-07-18 17:48:18,728 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:18,728 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:18,728 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_complete", "data": {"token_mint": "AkeS6QnJWfGt8emWMQ4LE9renCmW8HANM6q93Wc8pump", "token_symbol": "W3AILR", "token_name": "Web3 AI/ML", "status": "COMPLETED", "progress": 100.0, "narrative_analysis": "\u53d9\u4e8b\u5206\u6790\u5931\u8d25", "risk_assessment": "\u98ce\u9669\u8bc4\u4f30\u5931\u8d25", "market_analysis": "\u5e02\u573a\u5206\u6790\u5931\u8d25", "web_search_results": [{"title": "Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust", "url": "https://www.coinbase.com/", "snippet": " Coinbase is a secure online platform for buying, selling, transferring, and storing cryptocurrency. ", "relevance_score": 95.0}, {"title": "Pump Fun", "url": "https://pump.fun/board", "snippet": " Pump Culture     Airdrop Mania     Absurd Humor     Pet Frenzy     Just Tokens     Crypto Personalities\ud83d\udd76   Biz Grandpa     Weird Waifus    \u2728 Mock Utility     ", "relevance_score": 92.0}, {"title": "Pump.fun price today, PUMP to USD live price, marketcap and chart", "url": "https://coinmarketcap.com/currencies/pump-fun/", "snippet": " The live Pump.fun price today is $0.005083 USD with a 24-hour trading volume of $1183414215.79 USD. We update our PUMP to USD price in real-time. ", "relevance_score": 89.0}, {"title": "Pump.fun Price: PUMP Live Price Chart, Market Cap & News Today", "url": "https://www.coingecko.com/en/coins/pump-fun", "snippet": " Track the latest Pump.fun price, market cap, trading volume, news and more with CoinGecko's live PUMP price chart and popular\u00a0... ", "relevance_score": 86.0}, {"title": "create new coin - Pump Fun", "url": "https://pump.fun/create", "snippet": " Pump allows anyone to create coins. All coins created on Pump are fair-launch, meaning everyone has equal access to buy and sell when the coin is first created. ", "relevance_score": 83.0}, {"title": "Memecoin platform Pump.fun pursues US$1 billion token sale", "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/memecoin-platform-pump-fun-pursues-us1-billion-token-sale", "snippet": " 4 Jun 2025  \u00b7  Pump.fun, which has been compared to the edgy 4chan social media network, allows users to quickly create, promote and sell memecoins, a type of\u00a0... ", "relevance_score": 80.0}], "tweet_result": [], "ai_summary": "AI\u603b\u7ed3\u5931\u8d25", "investment_recommendation": "\u6295\u8d44\u5efa\u8bae\u5931\u8d25", "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": "2025-07-18T17:48:18.726310", "error_message": null}, "timestamp": "2025-07-18T17:48:18.726310"}
+2025-07-18 17:48:36,334 - backend.services.token_monitor:124 - INFO - 🪙 准备调用回调函数处理代币: STEAL
+2025-07-18 17:48:36,334 - backend.services.token_monitor:134 - INFO - 🪙 异步任务已提交: STEAL
+2025-07-18 17:48:36,335 - backend.main:144 - INFO - 🪙 [START] handle_new_token 开始处理: STEAL
+2025-07-18 17:48:36,336 - backend.main:147 - INFO - 🪙 检测到新代币: STEAL (Pepe the Thief)
+2025-07-18 17:48:36,336 - backend.main:148 - INFO - 🪙 代币详情: mint=CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump, 总供应量=1000000000
+2025-07-18 17:48:36,336 - backend.main:151 - INFO - 📤 [STEP 1] 准备创建代币消息: STEAL
+2025-07-18 17:48:36,336 - backend.main:158 - INFO - 📤 [STEP 2] 序列化消息: STEAL
+2025-07-18 17:48:36,337 - backend.main:160 - INFO - 📤 [STEP 3] 准备广播新代币消息: STEAL
+2025-07-18 17:48:36,337 - backend.main:161 - INFO - 📤 消息内容: {"type": "new_token", "data": {"name": "Pepe the Thief", "symbol": "STEAL", "uri": "https://ipfs.io/ipfs/bafkreiavtdzgv6ljcxpxgjstrbibg2hm2hlqjmvdrl4tiv4g7ayk6x7tqe", "mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "bonding_curve": "3QZpt2JbiZtihtqFFG13gCThEFxvnvk2ccNB2juXfCMj", "user": "6js...
+2025-07-18 17:48:36,337 - backend.main:163 - INFO - 📤 [STEP 4] 调用manager.broadcast: STEAL
+2025-07-18 17:48:36,337 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:36,337 - backend.main:72 - INFO - 📡 广播内容: {"type": "new_token", "data": {"name": "Pepe the Thief", "symbol": "STEAL", "uri": "https://ipfs.io/ipfs/bafkreiavtdzgv6ljcxpxgjstrbibg2hm2hlqjmvdrl4tiv4g7ayk6x7tqe", "mint": "CD7fFq9MxuE3tQXnjMMUCXGM...
+2025-07-18 17:48:36,338 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:36,338 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:36,339 - backend.main:166 - INFO - 📤 [STEP 5] 广播完成: STEAL
+2025-07-18 17:48:36,339 - backend.main:174 - INFO - 📝 [STEP 6] 准备添加到分析队列: STEAL
+2025-07-18 17:48:36,339 - backend.main:176 - INFO - 📝 将代币 STEAL 添加到分析队列
+2025-07-18 17:48:36,340 - backend.services.message_queue:53 - INFO - task_data = {'token_data': {'name': 'Pepe the Thief', 'symbol': 'STEAL', 'uri': 'https://ipfs.io/ipfs/bafkreiavtdzgv6ljcxpxgjstrbibg2hm2hlqjmvdrl4tiv4g7ayk6x7tqe', 'mint': 'CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump', 'bonding_curve': '3QZpt2JbiZtihtqFFG13gCThEFxvnvk2ccNB2juXfCMj', 'user': '6jsHhJk2vFGmRW5L12UQqBK9zgjewH8KRtqB7rogwX7u', 'creator': '6jsHhJk2vFGmRW5L12UQqBK9zgjewH8KRtqB7rogwX7u', 'timestamp': 1752832131, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:48:36'}, 'created_at': '2025-07-18 17:48:36', 'task_id': 'CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump_52f7b576-e81d-4826-b50a-6b0c56a2c157'}
+2025-07-18 17:48:36,341 - backend.services.message_queue:72 - INFO - 任务已添加到Redis队列: STEAL
+2025-07-18 17:48:36,342 - backend.services.message_queue:81 - INFO - 代币分析任务已入队: STEAL (CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump)
+2025-07-18 17:48:36,343 - backend.services.ai_analyzer:130 - INFO - 开始处理分析任务: {'token_data': {'name': 'Pepe the Thief', 'symbol': 'STEAL', 'uri': 'https://ipfs.io/ipfs/bafkreiavtdzgv6ljcxpxgjstrbibg2hm2hlqjmvdrl4tiv4g7ayk6x7tqe', 'mint': 'CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump', 'bonding_curve': '3QZpt2JbiZtihtqFFG13gCThEFxvnvk2ccNB2juXfCMj', 'user': '6jsHhJk2vFGmRW5L12UQqBK9zgjewH8KRtqB7rogwX7u', 'creator': '6jsHhJk2vFGmRW5L12UQqBK9zgjewH8KRtqB7rogwX7u', 'timestamp': 1752832131, 'virtual_token_reserves': 1073000000, 'virtual_sol_reserves': 30, 'real_token_reserves': 793100000, 'token_total_supply': 1000000000, 'market_cap': None, 'price_usd': None, 'created_at': '2025-07-18T17:48:36'}, 'created_at': '2025-07-18 17:48:36', 'task_id': 'CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump_52f7b576-e81d-4826-b50a-6b0c56a2c157'}
+2025-07-18 17:48:36,343 - backend.services.ai_analyzer:138 - INFO - 开始分析代币: STEAL
+2025-07-18 17:48:36,344 - backend.services.message_queue:152 - INFO - 分析进度更新: STEAL - 10.0%
+2025-07-18 17:48:36,344 - backend.services.ai_analyzer:255 - INFO - 🔍 使用高效Google搜索引擎搜索: STEAL
+2025-07-18 17:48:36,345 - backend.google_engine:101 - INFO - 🔍 开始Google搜索: $STEAL[CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump] cryptocurrency (需要6个结果)
+2025-07-18 17:48:36,345 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:36,346 - backend.main:72 - INFO - 📡 广播内容: {"type": "analysis_update", "data": {"token_mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "token_symbol": "STEAL", "token_name": "Pepe the Thief", "status": "ANALYZING", "progress": 10.0, "na...
+2025-07-18 17:48:36,347 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:36,348 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:36,348 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "token_symbol": "STEAL", "token_name": "Pepe the Thief", "status": "ANALYZING", "progress": 10.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:48:36.343553"}
+2025-07-18 17:48:37,521 - backend.google_engine:180 - INFO - ✅ Google搜索完成: $STEAL[CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump] cryptocurrency (获得6个结果)
+2025-07-18 17:48:37,523 - backend.services.ai_analyzer:267 - INFO - ✅ Google搜索获得 6 个结果
+2025-07-18 17:48:37,523 - backend.services.ai_analyzer:290 - INFO - 🔍 总共获得 6 个搜索结果
+2025-07-18 17:48:37,525 - backend.services.message_queue:152 - INFO - 分析进度更新: STEAL - 30.0%
+2025-07-18 17:48:37,525 - backend.services.ai_analyzer:232 - INFO - use tweet search for $STEAL(CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump)
+2025-07-18 17:48:37,526 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:37,526 - backend.main:72 - INFO - 📡 广播内容: {"type": "analysis_update", "data": {"token_mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "token_symbol": "STEAL", "token_name": "Pepe the Thief", "status": "ANALYZING", "progress": 30.0, "na...
+2025-07-18 17:48:37,528 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:37,529 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:37,529 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "token_symbol": "STEAL", "token_name": "Pepe the Thief", "status": "ANALYZING", "progress": 30.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:48:37.524657"}
+2025-07-18 17:48:38,428 - backend.main:272 - INFO - 💓 发送心跳到 127.0.0.1: {"type": "heartbeat", "timestamp": "2025-07-18T17:48:38.428010"}
+2025-07-18 17:48:38,429 - backend.main:248 - INFO - 📥 收到来自 127.0.0.1 的消息: heartbeat
+2025-07-18 17:48:38,429 - backend.main:260 - INFO - 📤 发送心跳响应到 127.0.0.1: {"type": "heartbeat_response", "timestamp": "2025-07-18T17:48:38.429633"}
+2025-07-18 17:48:38,430 - backend.main:248 - INFO - 📥 收到来自 127.0.0.1 的消息: heartbeat
+2025-07-18 17:48:38,430 - backend.main:260 - INFO - 📤 发送心跳响应到 127.0.0.1: {"type": "heartbeat_response", "timestamp": "2025-07-18T17:48:38.430171"}
+2025-07-18 17:48:41,585 - backend.services.ai_analyzer:244 - ERROR - 推特搜索引擎失败
+2025-07-18 17:48:41,586 - backend.services.message_queue:152 - INFO - 分析进度更新: STEAL - 50.0%
+2025-07-18 17:48:41,586 - backend.services.ai_analyzer:82 - INFO - 🤖 开始AI请求 (活跃: 1/1, 总计: 7)
+2025-07-18 17:48:41,587 - backend.services.ai_analyzer:350 - INFO - enter _do_ai_analyze_simple result = [WebSearchResult(title='Crypto theft booms to a record amid kidnappings, Bybit hack - CNBC', url='https://www.cnbc.com/2025/07/17/crypto-theft-hits-record-in-2025.html', snippet=" 21 hours ago  ·  So far this year, $2.17 billion has been stolen from crypto services — already eclipsing 2024's amount, according to a report from\xa0... ", relevance_score=95.0), WebSearchResult(title='Singaporean accused of stealing US$230m in bitcoin to ... - YouTube', url='https://www.youtube.com/watch?v=TvifIyUqI1c', snippet=' 6 Mar 2025  ·  ... stealing and laundering 4100 bitcoin from one individual, in a crime that prosecutors have described as "one of the largest cryptocurrency\xa0... ', relevance_score=92.0), WebSearchResult(title='Cryptocurrency theft of £1.1bn could be biggest ever, says Bybit - BBC', url='https://www.bbc.com/news/articles/cx2844nvwx8o', snippet=' 21 Feb 2025  ·  Cryptocurrency firm Bybit said hackers stole $1.5bn (£1.1bn) worth of digital currency in what could be the biggest crypto theft in history. ', relevance_score=89.0), WebSearchResult(title='Hackers steal $1.5 billion from exchange Bybit, biggest crypto heist', url='https://www.cnbc.com/2025/02/21/hackers-steal-1point5-billion-from-exchange-bybit-biggest-crypto-heist.html', snippet=" 21 Feb 2025  ·  Bybit, a major cryptocurrency exchange, has been hacked to the tune of $1.5 billion in digital assets, in what's estimated to be the largest crypto heist in\xa0... ", relevance_score=86.0), WebSearchResult(title="Hackers steal $1.5bn from crypto exchange in 'biggest digital heist ...", url='https://www.theguardian.com/technology/2025/feb/23/crypto-exchange-seeks-bybit-ethereum-stolen-digital-wallet', snippet=' 23 Feb 2025  ·  The cryptocurrency exchange Bybit has called on the “brightest minds” in cybersecurity to help it recover $1.5bn (£1.2bn) stolen by hackers. ', relevance_score=83.0), WebSearchResult(title='Hackers reportedly stole $2.4 billion from cryptocurrency exchange ...', url='https://www.abc.net.au/news/2025-02-24/bybit-cryptocurrency-hack-what-we-know/104974512', snippet=' 24 Feb 2025  ·  The Dubai-based platform Bybit said an attacker gained control of an Ethereum wallet and transferred its holdings to an unknown address. ', relevance_score=80.0)]
+2025-07-18 17:48:41,588 - backend.services.ai_analyzer:360 - INFO - tweet_context = 
+2025-07-18 17:48:41,588 - backend.services.ai_analyzer:392 - INFO - gemini simple analyze prompt 
+            分析以下加密货币代币的叙事背景：
+            
+            - 代币名称: Pepe the Thief
+            - 代币符号: STEAL
+            - 总供应量: 1,000,000,000
+            - 虚拟代币储备: 1,073,000,000
+            - 虚拟SOL储备: 30
+            - 实际代币储备: 793,100,000
+            
+            网络搜索结果:
+            标题: Crypto theft booms to a record amid kidnappings, Bybit hack - CNBC
+摘要:  21 hours ago  ·  So far this year, $2.17 billion has been stolen from crypto services — already eclipsing 2024's amount, according to a report from ... 
+链接: https://www.cnbc.com/2025/07/17/crypto-theft-hits-record-in-2025.html
+标题: Singaporean accused of stealing US$230m in bitcoin to ... - YouTube
+摘要:  6 Mar 2025  ·  ... stealing and laundering 4100 bitcoin from one individual, in a crime that prosecutors have described as "one of the largest cryptocurrency ... 
+链接: https://www.youtube.com/watch?v=TvifIyUqI1c
+标题: Cryptocurrency theft of £1.1bn could be biggest ever, says Bybit - BBC
+摘要:  21 Feb 2025  ·  Cryptocurrency firm Bybit said hackers stole $1.5bn (£1.1bn) worth of digital currency in what could be the biggest crypto theft in history. 
+链接: https://www.bbc.com/news/articles/cx2844nvwx8o
+标题: Hackers steal $1.5 billion from exchange Bybit, biggest crypto heist
+摘要:  21 Feb 2025  ·  Bybit, a major cryptocurrency exchange, has been hacked to the tune of $1.5 billion in digital assets, in what's estimated to be the largest crypto heist in ... 
+链接: https://www.cnbc.com/2025/02/21/hackers-steal-1point5-billion-from-exchange-bybit-biggest-crypto-heist.html
+标题: Hackers steal $1.5bn from crypto exchange in 'biggest digital heist ...
+摘要:  23 Feb 2025  ·  The cryptocurrency exchange Bybit has called on the “brightest minds” in cybersecurity to help it recover $1.5bn (£1.2bn) stolen by hackers. 
+链接: https://www.theguardian.com/technology/2025/feb/23/crypto-exchange-seeks-bybit-ethereum-stolen-digital-wallet
+            
+            推文结果:
+            
+            
+            请分析：
+                1. 项目的核心叙事和概念
+                2. 风险评分: 0-100 (100为最高风险)
+                3. 价格预测
+                4. 简洁但全面的总结
+                5. 投资建议
+            请以JSON格式返回：
+            {
+                "narrative_analysis": "叙事分析",
+                "risk_assessment": "风险评估",
+                "market_analysis": "市场分析",
+                "ai_summary": "AI总结",
+                "investment_recommendation": "投资建议"
+            }
+            
+2025-07-18 17:48:41,591 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:41,592 - backend.main:72 - INFO - 📡 广播内容: {"type": "analysis_update", "data": {"token_mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "token_symbol": "STEAL", "token_name": "Pepe the Thief", "status": "ANALYZING", "progress": 50.0, "na...
+2025-07-18 17:48:41,593 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:41,594 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:41,594 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_update", "data": {"token_mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "token_symbol": "STEAL", "token_name": "Pepe the Thief", "status": "ANALYZING", "progress": 50.0, "narrative_analysis": "", "risk_assessment": "", "market_analysis": "", "web_search_results": [], "tweet_result": [], "ai_summary": null, "investment_recommendation": null, "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": null, "error_message": null}, "timestamp": "2025-07-18T17:48:41.585855"}
+2025-07-18 17:48:41,888 - backend.services.ai_analyzer:401 - ERROR - Gemini API调用失败: 400 User location is not supported for the API use.
+2025-07-18 17:48:41,889 - backend.services.ai_analyzer:98 - ERROR - ❌ AI请求失败: 400 User location is not supported for the API use. (完成: 0, 失败: 7)
+2025-07-18 17:48:41,889 - backend.services.ai_analyzer:413 - ERROR - _ai_analyze_simple error 400 User location is not supported for the API use.
+2025-07-18 17:48:41,890 - backend.services.message_queue:180 - INFO - 分析完成: STEAL
+2025-07-18 17:48:41,890 - backend.main:71 - INFO - 📡 开始广播消息到 1 个连接
+2025-07-18 17:48:41,890 - backend.main:72 - INFO - 📡 广播内容: {"type": "analysis_complete", "data": {"token_mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "token_symbol": "STEAL", "token_name": "Pepe the Thief", "status": "COMPLETED", "progress": 100.0, ...
+2025-07-18 17:48:41,891 - backend.main:81 - INFO - ✅ 成功发送到连接 #1
+2025-07-18 17:48:41,891 - backend.main:92 - INFO - 📡 广播完成: 成功 1/1 个连接
+2025-07-18 17:48:41,891 - backend.main:205 - INFO - 广播分析结果成功: {"type": "analysis_complete", "data": {"token_mint": "CD7fFq9MxuE3tQXnjMMUCXGM21kLbsjGVaFu5acSpump", "token_symbol": "STEAL", "token_name": "Pepe the Thief", "status": "COMPLETED", "progress": 100.0, "narrative_analysis": "\u53d9\u4e8b\u5206\u6790\u5931\u8d25", "risk_assessment": "\u98ce\u9669\u8bc4\u4f30\u5931\u8d25", "market_analysis": "\u5e02\u573a\u5206\u6790\u5931\u8d25", "web_search_results": [{"title": "Crypto theft booms to a record amid kidnappings, Bybit hack - CNBC", "url": "https://www.cnbc.com/2025/07/17/crypto-theft-hits-record-in-2025.html", "snippet": " 21 hours ago  \u00b7  So far this year, $2.17 billion has been stolen from crypto services \u2014 already eclipsing 2024's amount, according to a report from\u00a0... ", "relevance_score": 95.0}, {"title": "Singaporean accused of stealing US$230m in bitcoin to ... - YouTube", "url": "https://www.youtube.com/watch?v=TvifIyUqI1c", "snippet": " 6 Mar 2025  \u00b7  ... stealing and laundering 4100 bitcoin from one individual, in a crime that prosecutors have described as \"one of the largest cryptocurrency\u00a0... ", "relevance_score": 92.0}, {"title": "Cryptocurrency theft of \u00a31.1bn could be biggest ever, says Bybit - BBC", "url": "https://www.bbc.com/news/articles/cx2844nvwx8o", "snippet": " 21 Feb 2025  \u00b7  Cryptocurrency firm Bybit said hackers stole $1.5bn (\u00a31.1bn) worth of digital currency in what could be the biggest crypto theft in history. ", "relevance_score": 89.0}, {"title": "Hackers steal $1.5 billion from exchange Bybit, biggest crypto heist", "url": "https://www.cnbc.com/2025/02/21/hackers-steal-1point5-billion-from-exchange-bybit-biggest-crypto-heist.html", "snippet": " 21 Feb 2025  \u00b7  Bybit, a major cryptocurrency exchange, has been hacked to the tune of $1.5 billion in digital assets, in what's estimated to be the largest crypto heist in\u00a0... ", "relevance_score": 86.0}, {"title": "Hackers steal $1.5bn from crypto exchange in 'biggest digital heist ...", "url": "https://www.theguardian.com/technology/2025/feb/23/crypto-exchange-seeks-bybit-ethereum-stolen-digital-wallet", "snippet": " 23 Feb 2025  \u00b7  The cryptocurrency exchange Bybit has called on the \u201cbrightest minds\u201d in cybersecurity to help it recover $1.5bn (\u00a31.2bn) stolen by hackers. ", "relevance_score": 83.0}, {"title": "Hackers reportedly stole $2.4 billion from cryptocurrency exchange ...", "url": "https://www.abc.net.au/news/2025-02-24/bybit-cryptocurrency-hack-what-we-know/104974512", "snippet": " 24 Feb 2025  \u00b7  The Dubai-based platform Bybit said an attacker gained control of an Ethereum wallet and transferred its holdings to an unknown address. ", "relevance_score": 80.0}], "tweet_result": [], "ai_summary": "AI\u603b\u7ed3\u5931\u8d25", "investment_recommendation": "\u6295\u8d44\u5efa\u8bae\u5931\u8d25", "analysis_started_at": "2025-07-18T17:45:13.118573", "analysis_completed_at": "2025-07-18T17:48:41.889866", "error_message": null}, "timestamp": "2025-07-18T17:48:41.889866"}
+2025-07-18 17:48:50,362 - backend.main:277 - INFO - 🔌 客户端 127.0.0.1 主动断开WebSocket连接
+2025-07-18 17:48:50,362 - backend.main:55 - INFO - WebSocket连接已断开，当前连接数: 0
+2025-07-18 17:48:50,453 - backend.main:129 - INFO - 正在关闭服务...
+2025-07-18 17:48:50,556 - backend.services.token_monitor:151 - INFO - WebSocket连接已关闭 (代码: None, 消息: None)
+2025-07-18 17:48:50,557 - backend.services.token_monitor:52 - INFO - 代币监控服务已停止
+2025-07-18 17:48:50,557 - backend.services.ai_analyzer:126 - INFO - AI分析服务已停止
+2025-07-18 17:48:50,558 - backend.main:224 - ERROR - 分析结果广播任务失败: Connection closed by server.
+2025-07-18 17:48:50,558 - backend.services.message_queue:92 - ERROR - 从Redis获取任务失败: Connection closed by server.
+2025-07-18 17:48:50,559 - backend.main:140 - INFO - 所有服务已关闭

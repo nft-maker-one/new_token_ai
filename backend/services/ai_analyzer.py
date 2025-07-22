@@ -8,14 +8,19 @@ import aiohttp
 import google.generativeai as genai
 import requests
 
+
 # 添加google_crawl目录到路径
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'google_crawl'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'tag_analyzer'))
 
+
+from backend.services.tag_analyzer import extract_crypto_tag
+from backend.services.translate import translate_english
 from backend.models.token import TokenData, AnalysisResult, NarrativeAnalysis, RiskLevel, MarketAnalysis, WebSearchResult,SimpleAnalysisResult
 from backend.services.message_queue import MessageQueue
 from backend.utils.logger import setup_logger
 from backend.utils.env_loader import get_env_var
-# uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reloa
+# uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
 # 导入高效Google搜索引擎
 try:
     from backend.google_engine import search_crypto_info, SearchResult
@@ -127,10 +132,11 @@ class AIAnalyzer:
         
     async def _process_analysis_task(self, task: Dict[str, Any]):
         """处理单个分析任务"""
+        logger.info(f"开始处理分析任务: {task}")
         try:
             token_data_dict = task["token_data"]
-        except:
-            logger.error("_process_analysis_task error {e}")
+        except Exception as e:
+            logger.error(f"_process_analysis_task error {e}")
             logger.error(f"task = {task}")
         token_data = TokenData(**token_data_dict)
         
@@ -199,12 +205,16 @@ class AIAnalyzer:
                 status="COMPLETED",
                 progress=100.0,
                 narrative_analysis=simple_analysis.narrative_analysis,
+                narrative_tag=",".join(set(await extract_crypto_tag(simple_analysis.narrative_analysis))),
                 risk_assessment=simple_analysis.risk_assessment,
                 market_analysis=simple_analysis.market_analysis,
+                market_tag=",".join(set(await extract_crypto_tag(simple_analysis.market_analysis))),      
                 web_search_results=search_results,
                 tweet_result=[{"content":tweet_analyse['content'] if len(tweet_analyse['content'])<100 else tweet_analyse['content'][:100]+"...","link":tweet_analyse["t_url"]} for tweet_analyse in tweet_analysis],
                 ai_summary=simple_analysis.ai_summary,
+                ai_tag=",".join(set(await extract_crypto_tag(simple_analysis.ai_summary))),
                 investment_recommendation=simple_analysis.investment_recommendation,
+                investment_tag=",".join(set(await extract_crypto_tag(simple_analysis.investment_recommendation))),
                 analysis_completed_at=datetime.now()
             )
             
@@ -219,7 +229,9 @@ class AIAnalyzer:
         def search_tweet(reqBody) -> List[Dict[str,Any]]:
             data = requests.post(self.tweet_endpoint,json=reqBody)
             if data.status_code==200:
+                logger.info(f"tweet search result {data.json()}")
                 return data.json()['data']
+
             else:
                 logger.error(f"收到错误的推特搜索结果 {data.json()}")
         try:

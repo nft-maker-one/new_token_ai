@@ -206,16 +206,19 @@ async def broadcast_analysis_results():
                     except Exception as e:
                         logger.error(f"广播分析结果失败: {e}")
         else:
-            # 从内存队列获取消息
+            # 从内存结果队列获取消息
             while True:
-                message = await message_queue._memory_queue.get()
-                try:
-                    # 广播分析结果到所有WebSocket连接
-                    # 这个地方需要广播整个 message
-                    # type data timestamp
-                    await manager.broadcast(message)
-                except Exception as e:
-                    logger.error(f"广播分析结果失败: {e}")
+                message = await message_queue.get_result_message()
+                if message:
+                    try:
+                        # 广播分析结果到所有WebSocket连接
+                        # message已经是JSON字符串格式
+                        await manager.broadcast(message)
+                    except Exception as e:
+                        logger.error(f"广播分析结果失败: {e}")
+                else:
+                    # 没有消息时短暂休眠
+                    await asyncio.sleep(0.1)
 
     except Exception as e:
         logger.error(f"分析结果广播任务失败: {e}")

@@ -113,6 +113,12 @@ class AnalysisResult(BaseModel):
     analysis_completed_at: Optional[datetime] = None
     error_message: Optional[str] = None
     
+    # 标签
+    narrative_tag:str = ""
+    market_tag:str = ""
+    investment_tag:str = ""
+    ai_tag:str = ""
+
     class Config:
         json_encoders = {
             datetime: lambda v: v.isoformat()

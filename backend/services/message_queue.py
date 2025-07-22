@@ -26,14 +26,16 @@ class MessageQueue:
         """初始化Redis连接"""
         try:
             self.redis_client = redis.from_url(self.redis_url, decode_responses=True)
-            self._memory_queue = asyncio.Queue()
             await self.redis_client.ping()
             logger.info("Redis连接成功建立")
         except Exception as e:
             logger.warning(f"Redis连接失败，使用内存队列: {e}")
             self.redis_client = None
-            # 使用内存队列作为备选
-            self._memory_queue = asyncio.Queue()
+
+        # 无论是否使用Redis，都创建内存队列作为备选
+        # 分离任务队列和结果队列
+        self._memory_task_queue = asyncio.Queue()  # 任务队列
+        self._memory_result_queue = asyncio.Queue()  # 结果队列
             
     async def close(self):
         """关闭Redis连接"""
@@ -73,8 +75,8 @@ class MessageQueue:
                 # 回退到内存队列
                 await self._memory_queue.put(task_data)
         else:
-            # 使用内存队列
-            await self._memory_queue.put(task_data)
+            # 使用内存任务队列
+            await self._memory_task_queue.put(task_data)
             
         logger.info(f"代币分析任务已入队: {token_data.symbol} ({token_data.mint})")
         
@@ -90,9 +92,9 @@ class MessageQueue:
                 logger.error(f"从Redis获取任务失败: {e}")
                 return None
         else:
-            # 使用内存队列
+            # 使用内存任务队列
             try:
-                return await asyncio.wait_for(self._memory_queue.get(), timeout=1.0)
+                return await asyncio.wait_for(self._memory_task_queue.get(), timeout=1.0)
             except asyncio.TimeoutError:
                 return None
                 
@@ -168,12 +170,12 @@ class MessageQueue:
                 )
             except Exception as e:
                 logger.error(f"发布分析结果失败: {e}")
-                # 回退到内存队列
-                await self._memory_queue.put(message)
+                # 回退到内存结果队列，存储JSON字符串
+                await self._memory_result_queue.put(json.dumps(message))
         else:
-            # 使用内存队列
-            await self._memory_queue.put(message)
-            logger.info(f"current memory_queue = {self._memory_queue}")
+            # 使用内存结果队列，存储JSON字符串
+            await self._memory_result_queue.put(json.dumps(message))
+            logger.info(f"current memory_result_queue = {self._memory_result_queue}")
         
         logger.info(f"分析完成: {analysis_result.token_symbol}")
         
@@ -186,11 +188,20 @@ class MessageQueue:
                 logger.error(f"获取队列大小失败: {e}")
                 return 0
         else:
-            return self._memory_queue.qsize()
+            return self._memory_task_queue.qsize()
             
     async def get_pending_analyses(self) -> Dict[str, AnalysisResult]:
         """获取待处理的分析"""
         return self.pending_analyses.copy()
+
+    async def get_result_message(self) -> Optional[str]:
+        """从结果队列获取消息（用于内存模式）"""
+        if not self.redis_client:
+            try:
+                return await asyncio.wait_for(self._memory_result_queue.get(), timeout=1.0)
+            except asyncio.TimeoutError:
+                return None
+        return None
         
     async def clear_completed_analyses(self, max_age_hours: int = 24):
         """清理已完成的分析（避免内存泄漏）"""

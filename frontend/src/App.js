@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import TokenCard from './components/TokenCard';
+import TokenCard from './components/TokenCardNew';
 import StatusBar from './components/StatusBar';
 import { useWebSocket } from './hooks/useWebSocket';
 import './App.css';
@@ -74,28 +74,29 @@ function App() {
         case 'analysis_complete':
           console.log('✅ App处理分析完成:', data.data.token_symbol);
           console.log("dissolve analysis_complete")
+          console.log(data.data)
           setTokens(prev => {
             const newTokens = new Map(prev)
             const token = newTokens.get(data.data.token_mint)
-            // if (token) {
+            if (token) {
               newTokens.set(data.data.token_mint, {
-                // ...token,
+                ...token,
               
-                  mint:data.data.token_mint,
-                  symbol:data.data.token_symbol,
-                  name:data.data.token_name,
-                  created_at:data.data.analysis_completed_at,
-                  token_total_supply:100,
-                  virtual_sol_reserves:100,
-                  
+                  // mint:data.data.token_mint,
+                  // symbol:data.data.token_symbol,
+                  // name:data.data.token_name,
+                  // created_at:data.data.analysis_completed_at,
+                  // token_total_supply:100,
+                  // virtual_sol_reserves:100,
+
                 analysisStatus: 'COMPLETED',
                 analysisProgress: 100,
                 analysisResult: data.data
               })
               console.log('✅ 分析完成已应用到代币:', data.data.token_symbol);
-            // } else {
-            //   console.warn('⚠️ 未找到要完成分析的代币:', data.data.token_mint);
-            // }
+            } else {
+              console.warn('⚠️ 未找到要完成分析的代币:', data.data.token_mint);
+            }
             return newTokens;
           })
           break;

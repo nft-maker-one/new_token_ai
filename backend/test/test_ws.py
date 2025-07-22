@@ -8,23 +8,47 @@ import random
 async def push_complete_task(websocket:websockets.WebSocketServerProtocol):
     while True:
         name = str(uuid.uuid4())
-        complete_task_msg = {
+        inital_task = {
+            'type':'new_token',
+            'data':{
+                'name':name[:8],
+                'symbol':name[:3],
+                'uri':'https://www.google.com',
+                'mint':name[:5],
+                'bonding_curve':name[:5],
+                'user':name[:5],
+                'creator':name[:5],
+                'created_at':int(datetime.datetime.now().timestamp()),
+                'virtual_token_reserves':1000000,
+                'virtual_sol_reserves':100,
+                'real_token_reserves':900000,
+                'token_total_supply':1000000000
+
+            }
+        }
+        await websocket.send(json.dumps(inital_task))
+        await asyncio.sleep(2)
+        analyze_task_msg = {
             "token_mint":name[:5],
             "token_symbol":name[:3],
             "token_name":name[:8],
             "status":"COMPLETED",
-            "progress":100.0,
-            "type":"analysis_complete",
             "narrative_analysis":"test",
+            "narrative_tag":"narrative",
+
             "risk_assessment":100,
             "market_analysis":"market_analysis",
+            "market_tag":"market",
             "web_search_results":[{"title":name,"url":"https://www.google.com","snippet":name[:4],"relevance_score":random.randint(40,80)}],
             "tweet_result":[{"content":name,"link":"https://www.baidu.com"}],
             "ai_summary":"ai_summary",
+            "ai_tag":"ai",
             "investment_recommendation":"investment_recommendation",
+            "investment_tag":"investment",
             "analysis_completed_at":datetime.datetime.now().isoformat()
         }
-        data = {'data':complete_task_msg,'type':complete_task_msg['type']}
+      
+        data = {'data':analyze_task_msg,'type':'analysis_complete'}
         await websocket.send(json.dumps(data))
         await asyncio.sleep(10)
         print("推送完成任务消息")
